@@ -1,4 +1,4 @@
-class API::UsersController < ApplicationController
+class Api::UsersController < ApplicationController
     
     def create
         @user = User.new(user_params)
@@ -8,9 +8,6 @@ class API::UsersController < ApplicationController
             render json: @user.errors.full_messages, status: 422
         end
     end
-
-    
-    private
 
     def user_params
         params.require(:user).permit(:username, :password)
