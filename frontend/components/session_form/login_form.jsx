@@ -1,6 +1,9 @@
 import React from 'react'
 
 class LoginForm extends React.Component {
+    componentDidMount() {
+        this.props.clearErrors();
+    }
 
     constructor(props) {
         super(props);
@@ -15,7 +18,19 @@ class LoginForm extends React.Component {
         this.props.processform(user);
     }
     update(field) {
-        return (e) => this.setState({ [field]: e.currentTarget.value })
+        return (e) => this.setState({ [field]: e.currentTarget.value });
+    }
+    renderErrors() {
+            return (
+                <ul className="errors">
+                    {this.props.errors.map((error, i) => (
+                        <li className="error" key={i}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            );
+        
     }
 
     render() {
@@ -23,8 +38,9 @@ class LoginForm extends React.Component {
             <div>
                
                 <h1 className="heading">SPLICEWISE!</h1>
+               
                 <form onSubmit={this.handleSubmit} className="loginform">
-                        
+                    <div>{this.renderErrors()}</div>
                     <input type="text" onChange={this.update('username')} placeholder="Username"/>
                  
                 
