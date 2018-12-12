@@ -21,17 +21,19 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Username
-                    <input type="text" onChange={this.update('username')} />
-                    </label>
-                    <label>
-                        Password
-                    <input type="password" onChange={this.update('password')} />
-                    </label>
-                    <input type="submit" value={this.props.formtype} />
+               
+                <h1 className="heading">SPLICEWISE!</h1>
+                <form onSubmit={this.handleSubmit} className="loginform">
+                        
+                    <input type="text" onChange={this.update('username')} placeholder="Username"/>
+                 
+                
+                    <input type="password" onChange={this.update('password')} placeholder="Password" />
+                 
+                    <input type="submit" className="loginsubmit" value="Log In to Splicewise"/>
+                    <button className="loginsubmit" >Demo Login</button>
                 </form>
+              
             </div>
         )
     }

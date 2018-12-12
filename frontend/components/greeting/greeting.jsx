@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, logout }) => {
     const signUp = () => (
         <nav>
-            <Link to="/signup">Sign up</Link>
+            <Link to="/" className="login-button">Log In</Link>
+            <p className="or">or</p>
+            <Link className="signup-button" to="/signup">Sign up</Link>
         </nav>
     );
     const greeting = () => (

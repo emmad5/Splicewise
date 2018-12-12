@@ -21,18 +21,17 @@ class SignupForm extends React.Component {
 
     render() {
         return(
-            <div>
-                <div>Already have a Splicewise account?<Link to="/login">Click here</Link></div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Username
-                    <input type="text" onChange={this.update('username')}/>
-                    </label>
-                    <label>
-                        Password
-                    <input type="password" onChange={this.update('password')}/>
-                    </label>
-                    <input type="submit" value={this.props.formtype}/>
+            <div>            
+                <form onSubmit={this.handleSubmit} className="signupform">
+                    <h3>INTRODUCE YOURSELF</h3>
+                    <h2>Hi There! My username is</h2>
+                    <input type="text" onChange={this.update('username')} className="userinput"/>
+                    
+                   
+                    <h2>And here's my password</h2>
+                    <input type="password" onChange={this.update('password')} className="userinput"/>
+                    <br/>
+                    <input type="submit" value="Sign Me Up!" className="signupbutton"/>
                 </form>
             </div>
         )
