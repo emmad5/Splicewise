@@ -12,7 +12,7 @@ export const logout = () => dispatch => (
     ApiUtil.logout().then(() => (dispatch(logoutCurrentUser())))
 );
 
-export const singup = (user) => dispatch => (
+export const signup = (user) => dispatch => (
     ApiUtil.signup(user).then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)))
 );
 
