@@ -188,7 +188,7 @@
  }
 
  .logoimg {
-    background-image: url('logo.png');
+    background: image_url('logo.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 70px;
@@ -201,7 +201,7 @@
  }
 
  .splash1img {
-    background-image: url('splash1.png');
+    background: image_url('splash1.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 1000px;
@@ -216,7 +216,7 @@
 
  }
   .splash2img {
-    background-image: url('splash2.png');
+    background: image_url('splash2.png');
     background-size: contain;
     background-repeat: no-repeat;
     width:  1000px;
