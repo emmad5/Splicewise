@@ -20,7 +20,7 @@ const Greeting = ({ logout, openModal }) => {
         {signUp()}
         <div className="splashcontenttitle">
         <div className='logoimg'></div>
-        <h1 className="split">Splice expenses with friends.</h1>
+        <h1 className="split">Split expenses with friends.</h1>
         </div>
         <div>
         <p className="splashtext"><span className="bold">Share </span> bills and IOUs. <span className="bold">Make sure </span> everyone gets paid back. <span className="bold">Totally free </span> for web, iPhone, and Android.</p>

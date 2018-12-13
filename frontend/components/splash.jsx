@@ -8,12 +8,10 @@ import { Switch, Route } from 'react-router';
 
 const Splash = () => (
     <div>
-    <Modal />
-            <Switch>        
-                <AuthRoute path="/signup" component={SignupFormContainer} />
-                <AuthRoute  path="/" component={GreetingContainer} />
-            </Switch>
+
     </div>
 )
 
 export default Splash
+
+//transition on height and width proerty

@@ -17,6 +17,15 @@ class User < ApplicationRecord
     validates :password, length: { minimum: 6 }, allow_nil: true
     before_validation :ensure_session_token
 
+    # has_many :friendships,
+    # foreign_key: :user1_id,
+    # class_nane: :Friendship, 
+    # dependent: :destroy
+
+    # has_many :friends
+    # through: :friendships,
+    # source: :user_2
+
     def password=(password) 
         @password = password
         self.password_digest =  BCrypt::Password.create(password)
