@@ -25,6 +25,10 @@ const Greeting = ({ logout, openModal }) => {
         <div>
         <p className="splashtext"><span className="bold">Share </span> bills and IOUs. <span className="bold">Make sure </span> everyone gets paid back. <span className="bold">Totally free </span> for web, iPhone, and Android.</p>
         </div>
+        <div className='splashimg'>
+            <div className='splash1img'></div>
+            <div className='splash2img'></div>
+        </div>
             <Link className="signup-big-button" to="/signup"><div>Get started now</div><div className='signup-smaller'>(It's free!)</div></Link>
         </nav>
     )

@@ -23,7 +23,7 @@
     padding-right: 10px;
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     position: absolute;
-    right: 100px;
+    right: 250px;
     top: 10px;
     text-shadow: 0 -1px 0 #c83400;
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
@@ -44,9 +44,10 @@
     padding-right: 10px;
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     position: absolute;
-    right: 200px;
+    right: 350px;
     top: 10px;
     text-shadow: 0 -1px 0 #318970;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
  }
  .login-button:hover {
     background-color: #43BA98;
@@ -55,7 +56,7 @@
     position: absolute;
     padding: 3px;
     margin-top: 0;
-    right: 175px;
+    right: 325px;
     top: 12px; 
     font-size: 14px;
     color: white;
@@ -63,12 +64,12 @@
  }
 
  .heading {
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Lora', serif;
     letter-spacing: 9px;
     font-size: 20px;
     position: absolute;
     left: 250px;
-    font-weight: normal;
+    font-weight: 600;
     margin-top: 13px;
  }
 
@@ -106,6 +107,7 @@
 }
  .loginsubmit:hover {
     background-color: #43BA98;
+    
  }
  .signupform {
      position: absolute;
@@ -125,6 +127,7 @@
     border-radius: 5px;
     width: 250px;
     font-size: 18px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
  }
 
  .userinput {
@@ -163,6 +166,30 @@
     height: 70px;
     z-index: 2;
  }
+ .splashimg {
+    display: flex;
+    margin-top: 20px;
+ }
+
+ .splash1img {
+    background-image: url('splash1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 350px;
+    z-index: 2;
+   margin-left: 350px;
+ }
+  .splash2img {
+    background-image: url('splash2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:  1000px;
+    height: 350px;
+    z-index: 2;
+
+  
+ }
 
  .splashcontenttitle {
     margin: 30px;
@@ -196,9 +223,10 @@
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     position: absolute;
     right: 40%;
-    top: 500px;
+    top: 600px;
     text-shadow: 0 -1px 0 #c83400;
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
  }
  .signup-smaller {
   font-size: 18px;
