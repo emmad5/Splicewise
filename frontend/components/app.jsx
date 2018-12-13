@@ -6,11 +6,13 @@ import DashboardContainer from './dashboard/dashboard_container';
 
 const App = () => (
     <div>
-        <Switch>  
+       
             <AuthRoute path="/" component={Splash} />
             <ProtectedRoute path="/dashboard" component={DashboardContainer} />
-        </Switch>
+     
     </div>
 );
 
 export default App;
+
+// questions - redirecting, pictures in heroku
