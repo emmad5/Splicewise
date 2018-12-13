@@ -10,6 +10,5 @@ class Api::SessionsController < ApplicationController
     end
 
     def bill_params
-        params.require(:bill).permit(:description, :category, :balance)
     end
 end
