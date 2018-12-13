@@ -38,10 +38,10 @@ class SignupForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className="signupform">
                     <h3 className="intro">INTRODUCE YOURSELF</h3>
                     <div>{this.renderErrors()}</div>
-                    <h2>Hi There! My username is</h2>
-                    <input type="text" onChange={this.update('username')} className="userinput"/>
-                    <h2>And here's my password</h2>
-                    <input type="password" onChange={this.update('password')} className="userinput"/>
+                    <h2 className="usernametext">Hi There! My username is</h2>
+                    <input type="text" onChange={this.update('username')} className="usernameinput"/>
+                    <h2 className="passwordtext">And here's my <span className="bold"> password:</span></h2>
+                    <input type="password" onChange={this.update('password')} className="passwordinput"/>
                     <br/>
                     <input type="submit" value="Sign Me Up!" className="signupbutton"/>
                 </form>

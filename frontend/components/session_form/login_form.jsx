@@ -51,7 +51,7 @@ class LoginForm extends React.Component {
                 <input type="text" onChange={this.update('username')} className="logininput" placeholder="Username"/>
                     <input type="password" onChange={this.update('password')} className="logininput" placeholder="Password" />
                 <input type="submit" className="loginsubmit" value="Log In to Splicewise"/>
-                <button className="loginsubmit" onClick={this.handleSubmit2}>Demo Login</button>
+                    <button className="demo" onClick={this.handleSubmit2}>Demo Login</button>
                 </form>
 
             </div>

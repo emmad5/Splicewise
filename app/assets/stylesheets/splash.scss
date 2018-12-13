@@ -111,13 +111,12 @@
  }
  .signupform {
      position: absolute;
-     top: 200px;
-     left: 30%;
+     top: 120px;
+     left: 45%;
      color: grey
  }
  .signupbutton {
     background-color: #ff652f;
-    padding: 2px;
     text-shadow: 0 -1px 0 #c83400;
     color: white;
     border: 1px grey solid;
@@ -125,9 +124,15 @@
     cursor: pointer;
     margin-top: 19px;
     border-radius: 5px;
-    width: 250px;
+    height: 40px;
+    width: 140px;
     font-size: 18px;
+    padding-left: 20px;
+    padding-right: 30px;
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+ }
+ .signupbutton:hover {
+    background-color: rgb(235, 92, 41);
  }
 
  .userinput {
@@ -139,6 +144,30 @@
     background: white;
     border: 1px black solid;
  }
+  .usernameinput {
+    width: 320px;
+    height: 50px;
+    font-size: 20px;
+    color: black;
+    padding-left: 4px;
+    background: white;
+    border: 1px grey solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+
+ }
+  .passwordinput {
+    width: 320px;
+    height: 30px;
+    font-size: 12px;
+    color: black;
+    padding-left: 4px;
+    background: white;
+    border: 1px grey solid;
+    margin-top: 20px;
+     border-radius: 3px;
+ }
  .logininput {
     width: 260px;
     height: 25px;
@@ -146,7 +175,7 @@
     color: black;
     padding-left: 4px;
     background: white;
-    margin-top: 6px;
+    margin: 6px;
     border: 1px grey solid;
  }
 
@@ -180,6 +209,12 @@
     z-index: 2;
    margin-left: 350px;
  }
+ .splash1img:hover {
+   // margin-left: 400px;
+   // margin-right: -50px;
+   //  z-index: 3;
+
+ }
   .splash2img {
     background-image: url('splash2.png');
     background-size: contain;
@@ -187,8 +222,9 @@
     width:  1000px;
     height: 350px;
     z-index: 2;
+ }
+ .splash2img:hover {
 
-  
  }
 
  .splashcontenttitle {
@@ -205,7 +241,7 @@
    color: #444444;
  }
  .intro {
-   color: #444444;
+   color: rgba(153, 150, 150, 0.473);
  }
  .bold {
     font-weight: bold;
@@ -234,5 +270,28 @@
  }
   .signup-big-button:hover {
       background-color: #EB3D00;
+  }
 
+  .demo {   
+   padding: 2px;
+   text-shadow: 0 -1px 0 #EB3D00;
+   color: white;
+    border: 1px grey solid;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    cursor: pointer;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+     background-color: #ff652f;
+  }
+  .demo:hover {
+      background-color: #EB3D00;
+  }
+
+  .usernametext {
+     color: #333333;
+     font-size: 28px;
+  }
+   .passwordtext {
+     color: #333333;
   }

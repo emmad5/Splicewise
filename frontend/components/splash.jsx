@@ -9,9 +9,9 @@ import { Switch, Route } from 'react-router';
 const Splash = () => (
     <div>
     <Modal />
-            <Switch>
-                <AuthRoute exact path="/" component={GreetingContainer} />
+            <Switch>        
                 <AuthRoute path="/signup" component={SignupFormContainer} />
+                <AuthRoute  path="/" component={GreetingContainer} />
             </Switch>
     </div>
 )
