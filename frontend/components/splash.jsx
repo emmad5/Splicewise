@@ -3,14 +3,17 @@ import GreetingContainer from './greeting/greeting_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute } from '../util/route_util';
+import Modal from './modal';
+import { Switch, Route } from 'react-router';
 
 const Splash = () => (
-    <header className="header">
-        <h1 className="heading">SPLICEWISE!</h1>
-        <GreetingContainer />
-        <AuthRoute path="/" exact component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} />
-    </header>
+    <div>
+    <Modal />
+            <Switch>
+                <AuthRoute exact path="/" component={GreetingContainer} />
+                <AuthRoute path="/signup" component={SignupFormContainer} />
+            </Switch>
+    </div>
 )
 
 export default Splash

@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50px;
+  right: 150px;
+  left: 70%;
+}

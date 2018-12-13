@@ -36,12 +36,10 @@ class SignupForm extends React.Component {
         return(
             <div>            
                 <form onSubmit={this.handleSubmit} className="signupform">
-                    <h3>INTRODUCE YOURSELF</h3>
+                    <h3 className="intro">INTRODUCE YOURSELF</h3>
                     <div>{this.renderErrors()}</div>
                     <h2>Hi There! My username is</h2>
                     <input type="text" onChange={this.update('username')} className="userinput"/>
-                    
-                   
                     <h2>And here's my password</h2>
                     <input type="password" onChange={this.update('password')} className="userinput"/>
                     <br/>

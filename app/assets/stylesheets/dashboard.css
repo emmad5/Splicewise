@@ -10,7 +10,7 @@
  .dashboard-header {
      display: flex;
      height: 33px;
-     background-color: mediumaquamarine;
+     background-color: #5BC5A7;
      color: white;
      position: relative;
      border: 1px black solid;
@@ -27,6 +27,7 @@
     box-shadow: 2px 1px 1px lightgrey;
     font-size: 15px;
     cursor: pointer;
+    color: grey;
  }
 
  
@@ -40,9 +41,9 @@
     font-weight: lighter;
     right: 150px;
     cursor: pointer;
-    background-color: mediumaquamarine;
+    background-color: #5BC5A7;
     border: 0;
-    height: 33px;
+    height: 30px;
  }
 .username:hover {
     background-color: #43BA98;

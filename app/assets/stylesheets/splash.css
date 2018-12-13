@@ -2,10 +2,12 @@
  .header {
      display: flex;
      height: 48px;
-     background-color: mediumaquamarine;
+     background-color: #5BC5A7;
      color: white;
      position: relative;
      width: 100%;
+   border-bottom: 1px grey solid;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
  }
 
 
@@ -32,7 +34,7 @@
  .login-button {
     border: 1px grey solid;
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
-    background-color: mediumaquamarine;
+    background-color: #5BC5A7;
     padding: 5px;
     color: white;
     font-size: 14px;
@@ -56,31 +58,32 @@
     right: 175px;
     top: 12px; 
     font-size: 14px;
+    color: white;
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
  }
 
  .heading {
     font-family:'Times New Roman', Times, serif;
-    letter-spacing: 6px;
-    font-size: 21px;
+    letter-spacing: 9px;
+    font-size: 20px;
     position: absolute;
-    left: 150px;
-    font-weight: lighter;
+    left: 250px;
+    font-weight: normal;
+    margin-top: 13px;
  }
 
  .loginform {
      display: flex;
      flex-direction: column;
-     position: absolute;
-     right: 100px;
-     top: 70px;
-     width: 200px;
-     background-color: lightgray;
+     width: 300px;
+     background-color: #EEEEEE;
      padding: 20px;
      border-radius: 5px;
+     border: 1px grey solid;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
  }
  .loginsubmit {
-     background-color: mediumaquamarine;
+     background-color: #5BC5A7;
      padding: 2px;
      text-shadow: 0 -1px 0 #318970;
      color: white;
@@ -108,8 +111,7 @@
      position: absolute;
      top: 200px;
      left: 30%;
-     color: black;
-     
+     color: grey
  }
  .signupbutton {
     background-color: #ff652f;
@@ -126,7 +128,83 @@
  }
 
  .userinput {
-    width: 250px;
+    width: 260px;
     height: 25px;
-    font-size: 20px;
+    font-size: 13px;
+    color: black;
+    padding-left: 4px;
+    background: white;
+    border: 1px black solid;
  }
+ .logininput {
+    width: 260px;
+    height: 25px;
+    font-size: 13px;
+    color: black;
+    padding-left: 4px;
+    background: white;
+    margin-top: 6px;
+    border: 1px grey solid;
+ }
+
+ .split {
+    font-size: 68px;
+    font-weight: bold;
+    text-align: center;
+    color: #444444;
+    padding-left: 25px;
+ }
+
+ .logoimg {
+    background-image: url('logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    z-index: 2;
+ }
+
+ .splashcontenttitle {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+ }
+ .splashtext {
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+   color: grey;
+ }
+ .intro {
+   color: #444444;
+ }
+ .bold {
+    font-weight: bold;
+ }
+
+ .signup-big-button {
+    border: 1px grey solid;
+    background-color: #ff652f;
+    padding: 5px;
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position: absolute;
+    right: 40%;
+    top: 500px;
+    text-shadow: 0 -1px 0 #c83400;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+ }
+ .signup-smaller {
+  font-size: 18px;
+  text-align: center;
+ }
+  .signup-big-button:hover {
+      background-color: #EB3D00;
+
+  }

@@ -1,21 +1,31 @@
-import React from 'react'
+import React from 'react';
+
+
 
 class LoginForm extends React.Component {
+    
     componentDidMount() {
         this.props.clearErrors();
     }
 
     constructor(props) {
         super(props);
-        this.state = { username: "", password: "" };
+        this.state = { username: "", password: "", modalIsOpen: false };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.update = this.update.bind(this)
+        this.handleSubmit2 = this.handleSubmit2.bind(this);
+        this.update = this.update.bind(this);
+       
     }
-
+   
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processform(user);
+        this.props.processform(user).then(this.props.closeModal);
+    }
+    handleSubmit2(e) {
+        e.preventDefault();
+        const user2 = Object.assign({username: 'guest', password: 'password'});
+        this.props.processform(user2).then(this.props.closeModal);
     }
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value });
@@ -36,20 +46,14 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div>
-               
-                <h1 className="heading">SPLICEWISE!</h1>
-               
-                <form onSubmit={this.handleSubmit} className="loginform">
-                    <div>{this.renderErrors()}</div>
-                    <input type="text" onChange={this.update('username')} placeholder="Username"/>
-                 
-                
-                    <input type="password" onChange={this.update('password')} placeholder="Password" />
-                 
-                    <input type="submit" className="loginsubmit" value="Log In to Splicewise"/>
-                    <button className="loginsubmit" >Demo Login</button>
+                <form onSubmit={this.handleSubmit} className="loginform" >
+                <div>{this.renderErrors()}</div>
+                <input type="text" onChange={this.update('username')} className="logininput" placeholder="Username"/>
+                    <input type="password" onChange={this.update('password')} className="logininput" placeholder="Password" />
+                <input type="submit" className="loginsubmit" value="Log In to Splicewise"/>
+                <button className="loginsubmit" onClick={this.handleSubmit2}>Demo Login</button>
                 </form>
-              
+
             </div>
         )
     }
