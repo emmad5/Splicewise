@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2018_12_13_192506) do
 
   create_table "bills", force: :cascade do |t|
     t.integer "creator_id", null: false
-    t.string "description", default: "Uncategorized", null: false
-    t.string "category", null: false
+    t.string "description", null: false
+    t.string "category", default: "Uncategorized", null: false
     t.boolean "settled", default: false
     t.decimal "balance", precision: 10, scale: 2
     t.datetime "created_at", null: false

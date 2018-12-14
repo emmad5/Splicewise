@@ -4,8 +4,8 @@
 #
 #  id          :bigint(8)        not null, primary key
 #  creator_id  :integer          not null
-#  description :string           default("Uncategorized"), not null
-#  category    :string           not null
+#  description :string           not null
+#  category    :string           default("Uncategorized"), not null
 #  settled     :boolean          default(FALSE)
 #  balance     :decimal(10, 2)
 #  created_at  :datetime         not null

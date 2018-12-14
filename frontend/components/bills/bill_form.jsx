@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class SignupForm extends React.Component {
-    componentDidMount() {
-        this.props.clearErrors();
-    }
+class BillForm extends React.Component {
+ 
     constructor(props) {
         super(props);
-        this.state = {description: "", balance: 0, };
+        this.state = {description: "", balance: "", };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
     }
@@ -18,7 +16,7 @@ class SignupForm extends React.Component {
         this.props.createBill(bill).then(this.props.closeModal);
     }
     update(field) {
-        return (e) => this.setState({ [field]: e.currentTarget.value })
+        return (e) => this.setState({ [field]: e.currentTarget.value });
     }
     renderErrors() {
         return (
@@ -35,14 +33,28 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit} className="signupform">
-                    <input type="text" placeholder="description"/>
+                <form onSubmit={this.handleSubmit} className="billform">
+                    <h2 className="add-a-bill">Add a bill
+                    <button onClick={this.props.closeModal} className="X">X</button></h2>
+                    <div className='innerbillform'>
+                    <div className='addfriendscont'>
+                        <label className='addfriendslabel'>With <strong>you</strong> and:
+                    <input className="addfriends" type="text" placeholder="Enter username"/>
+                    </label>
+                        </div>
+                        <input className='desc' type="text" onChange={this.update('description')} placeholder="Enter a description" value={this.state.title} />
+                    <div className='amount'><div className='dollar'>$</div>
+                    <input className="amtinput" type="text" onChange={this.update('balance')} placeholder="0.00" value={this.state.balance} />
+                    </div>
+                    <div className='paidby'>
+                            Paid by <a className="you">you</a> and split <a className="you">equally</a>.
+                    </div>
+                    </div>
+                   <div className='buttons'>
+                        <button onClick={this.props.closeModal} className="cancelbutton">Cancel</button>
+                    <input type="submit" value="Save" className="savebutton" />
+                    </div>
                     
-                    <input type="text" onChange={this.update('title')} placeholder="Enter a description" value={this.state.title} />
-  
-                    <input type="number" onChange={this.update('balance')} placeholder="0.00" value={this.state.balance} />
-                    <input type="date"/>
-                    <input type="submit" value="Save" className="signupbutton" />
                 </form>
             </div>
         )
@@ -50,4 +62,4 @@ class SignupForm extends React.Component {
 
 }
 
-export default SignupForm;
+export default BillForm;

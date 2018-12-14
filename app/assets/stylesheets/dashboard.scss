@@ -43,7 +43,7 @@
     height: 30px;
  }
 .username:hover {
-    background-color: #43BA98;
+   background-color: #43BA98;
 }
 
 .main {
@@ -52,18 +52,19 @@
    align-items: center;
 }
 .main-nav {
-   border: 1px lightgrey solid;
+   border: .5px lightgrey solid;
    height: 1000px;
    width: 558px;
+   box-shadow: inset 0 .3px 0 rgba(255,255,255,.25), 0 8px 8px rgba(124, 124, 124, 0.8);
 
 }
 .left-nav {
-   border: 1px lightgrey solid;
+
    height: 1000px;
    width: 13%;
 }
 .right-nav {
-   border: 1px lightgrey solid;
+  
    height: 1000px;
    width: 13%;
 }
@@ -74,6 +75,7 @@
     width: 100px;
     height: 100px;
     z-index: 2;
+   border-left: .5px lightgrey solid;
 
 }
 .headimg{
@@ -85,6 +87,9 @@
     z-index: 2;
     margin-top: 5px;
     margin-right: 5px;
+    border: .5px lightgrey solid;
+    border-radius: 9px;
+    padding: 10px;
 
 }
 
@@ -93,10 +98,15 @@
    height: 112px;
    background-color: #EEEEEE;
    position: relative;
+      border: .5px lightgrey solid;
+
 
 }
 .usernameimg {
    display: flex;
+}
+.usernameimg:hover {
+   background-color: #43BA98;
 }
 .dashboardtitle {
    position: absolute;
@@ -149,4 +159,20 @@
     text-shadow: 0 -1px 0 #318970;
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
 
+}
+
+.logout {
+   position: fixed;
+   width: 150px;
+   height: 30px;
+   top: 28px;
+   right: 300px;
+   font-size: 14px;
+   text-align: center;
+   color: #333;
+   box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.33);
+}
+.logout:hover {
+    background-color: #43BA98;
+    color: white;
 }

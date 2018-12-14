@@ -12,7 +12,7 @@ class Api::BillsController < ApplicationController
     end
 
     def index
-        @bills = Bill.find_by(creator_id: current_user.id)
+        @bills = Bill.all
         render :index
     end
 

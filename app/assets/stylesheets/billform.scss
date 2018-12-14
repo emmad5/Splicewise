@@ -1,0 +1,119 @@
+
+.billform {
+   background: white;
+   display: flex;
+   position: fixed;
+   top: 100px;
+   left: 550px;
+   flex-direction: column;
+   border: 1px solid #999;
+   box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+   border-radius: 8px;
+   height: 394px;
+   width: 352px;
+}
+
+.add-a-bill {
+    background: #5cc5a7;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #36977b;
+    text-shadow: 0 -1px 0 #318a71;
+    font-size: 18px;
+    font-weight: bold;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px 6px 0px 0px;
+    
+}
+.buttons {
+   display: flex;
+   justify-content: flex-end;
+   border-top: 1px lightgrey solid;
+   padding-top: 20px;
+   padding-bottom: 0;
+
+}
+.savebutton {
+    background: #5cc5a7;
+    color: #fff;
+    text-shadow: 0 -1px 0px #318a71;
+    border: 1px grey solid;
+    background-color: #5BC5A7;
+    margin-right: 10px;
+    font-size: 15px;
+    width: 60px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 9px 12px;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+}
+
+.cancelbutton {
+    background: #f6f6f6;
+    color: #333;
+    border: 1px solid;
+    font-size: 15px;
+    width: 80px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 9px 14px;
+    margin-right: 10px;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);   
+}
+.cancelbutton:hover {
+    background-color: #cccaca;
+}
+.addfriends {
+   padding-left: 10px;
+   padding-bottom: 10px;
+   padding-top: 10px;
+  
+
+}
+.addfriendslabel {
+   font-size: 14px;
+   padding-left: 4px;
+ 
+
+}
+.dollar {
+   font-size: 30px;
+   padding: 20px 0px 0px 120px;
+}
+.amount {
+   display: flex;
+}
+.innerbillform {
+   height: 257px;
+}
+.addfriendscont {
+   padding-bottom: 10px;
+   border-bottom: 1px lightgrey solid;
+}
+.amtinput {
+   font-size: 36px;
+   padding-left: 5px;
+  padding-top: 18px;
+}
+.you {
+   background: rgb(245, 242, 242);
+   border-radius: 100px;
+   padding: 0px 4px;
+   border: 1px grey dashed;
+   color: #5BC5A7;
+}
+
+.paidby {
+   font-size: 14px;
+   margin-left: 40px;
+   padding-top: 60px;
+   margin-bottom: 60px;
+
+}
+.desc {
+   font-size: 20px;
+   padding: 20px 0px 0px 120px;
+
+}

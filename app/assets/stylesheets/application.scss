@@ -22,6 +22,17 @@
   z-index: 10;
 }
 
+.billform-background{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 252, 252, 0.829);
+  z-index: 10;
+
+}
+
 .modal-child {
   position: absolute;
   top: 50px;
