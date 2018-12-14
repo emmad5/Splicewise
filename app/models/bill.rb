@@ -13,5 +13,11 @@
 #
 
 class Bill < ApplicationRecord
+    validates :creator_id, :category, :balance, :description, presence: true
+    validates :category, inclusion: { in: ["Uncategorized", "Food and Drink", 'Home', 'Life', 'Transportation', 'Utilities'] }
+
+    belongs_to :creator,
+    foreign_key: :creator_id,
+    class_name: :User
 
 end
