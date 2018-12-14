@@ -1,0 +1,19 @@
+.eachbill {
+    margin: 10px;
+    height: 55px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+}
+
+.allbills {
+    display: flex;
+    flex-direction: column;
+ 
+}
+.balance {
+    margin-left: 50px;
+}
+.description {
+    margin-left: 50px;
+}

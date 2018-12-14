@@ -9,6 +9,8 @@ class SignupForm extends React.Component {
         super(props);
         this.state = {username: "", password: ""};
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmit2 = this.handleSubmit2.bind(this);
+
         this.update = this.update.bind(this);
     }
 
@@ -16,6 +18,11 @@ class SignupForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processform(user);
+    }
+    handleSubmit2(e) {
+        e.preventDefault();
+        const user2 = Object.assign({ username: 'guest', password: 'password' });
+        this.props.login(user2);
     }
     update(field) {
         return (e) => this.setState({[field]: e.currentTarget.value})
@@ -44,6 +51,8 @@ class SignupForm extends React.Component {
                     <input type="password" onChange={this.update('password')} className="passwordinput"/>
                     <br/>
                     <input type="submit" value="Sign Me Up!" className="signupbutton"/>
+                    <br/>
+                    <button onClick={this.handleSubmit2} className="loginbutton">Demo</button>
                 </form>
             </div>
         )

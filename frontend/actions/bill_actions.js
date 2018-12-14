@@ -22,8 +22,8 @@ export const fetchBill = (id) => dispatch => (
     ApiUtil.fetchBill(id).then(bill => dispatch(receiveBill(bill)), errors => dispatch(receiveBillErrors(errors.responseJSON)))
 );
 
-export const fetchBills = () => dispatch => (
-    ApiUtil.fetchBills.then(bills => dispatch(receiveBills(bills)), errors => dispatch(receiveBillErrors(errors.responseJSON)))
+export const fetchBills = () => (
+    dispatch => ApiUtil.fetchBills().then(bills => dispatch(receiveBills(bills)))
 );
 
 const receiveBill = (bill) => ({

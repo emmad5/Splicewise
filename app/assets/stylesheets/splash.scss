@@ -31,6 +31,26 @@
  .signup-button:hover {
     background-color: #EB3D00;
  }
+ .loginbutton {
+    text-align: center;
+    background-color: #5BC5A7;
+    text-shadow: 0 -1px 0 #318970;
+    color: white;
+    border: 1px grey solid;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    cursor: pointer;
+    margin-top: 19px;
+    border-radius: 5px;
+    height: 40px;
+    width: 140px;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 30px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+ }
+ .loginbutton:hover {
+    background-color: #43BA98;
+ }
  .login-button {
     border: 1px grey solid;
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);

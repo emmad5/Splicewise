@@ -11,7 +11,7 @@ export default (state = {}, action) => {
             delete newState[action.billId];
             return newState;
         case RECEIVE_BILLS:
-            return action.bills;
+            return Object.assign({}, action.bills)
         default:
             return state;
     }
