@@ -5,7 +5,6 @@ import EditBillForm from './edit_bill_form';
 import { updateBill, clearBillErrors } from '../../actions/bill_actions';
 
 const mapStateToProps = (state) => ({
-
 })
 const mapDispatchToProps = dispatch => {
     return {

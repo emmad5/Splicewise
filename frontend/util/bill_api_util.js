@@ -2,7 +2,7 @@ export const createBill = (bill) => (
     $.ajax({
         method: "POST",
         url: "api/bills",
-        data: { bill }
+        data: {bill}
     })
 );
 
@@ -10,8 +10,8 @@ export const createBill = (bill) => (
 export const updateBill = (bill) => (
     $.ajax({
         method: "PATCH",
-        url: `/api/bills/${bill.id}/edit`,
-        data: { bill }
+        url: `/api/bills/${bill.id}`,
+        data: {bill}
     })
 );
 

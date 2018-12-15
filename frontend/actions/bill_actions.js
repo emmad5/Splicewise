@@ -22,19 +22,19 @@ export const fetchBill = (id) => dispatch => (
     ApiUtil.fetchBill(id).then(bill => dispatch(receiveBill(bill)), errors => dispatch(receiveBillErrors(errors.responseJSON)))
 );
 
-export const fetchBills = () => (
-    dispatch => ApiUtil.fetchBills().then(bills => dispatch(receiveBills(bills)))
+export const fetchBills = () => dispatch => (
+    ApiUtil.fetchBills().then(bills => dispatch(receiveBills(bills)))
 );
 
 const receiveBill = (bill) => ({
     type: RECEIVE_BILL,
     bill
-});
+});4
 
 
 const receiveBills = (bills) => ({
     type: RECEIVE_BILLS,
-    bills
+    bills: bills
 });
 
 const removeBill = (billId) => ({

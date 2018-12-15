@@ -2,6 +2,7 @@ import { RECEIVE_BILL, DELETE_BILL, RECEIVE_BILLS} from '../actions/bill_actions
 
 
 export default (state = {}, action) => {
+    
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_BILL:
@@ -11,7 +12,7 @@ export default (state = {}, action) => {
             delete newState[action.billId];
             return newState;
         case RECEIVE_BILLS:
-            return Object.assign({}, action.bills)
+            return action.bills;
         default:
             return state;
     }

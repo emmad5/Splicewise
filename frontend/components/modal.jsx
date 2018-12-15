@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 import LoginFormContainer from './session_form/login_form_container';
 import BillFormContainer from './bills/bill_form_container';
 import LogoutContainer from './dashboard/logout_container';
+import EditBillContainer from './bills/edit_bill_container';
 
 
-function Modal({ modal, closeModal }) {
+
+function Modal({ modal, closeModal, id }) {
     if (!modal) {
         return null;
     }
@@ -24,6 +26,10 @@ function Modal({ modal, closeModal }) {
         case 'logout':
             modal_class = 'modal-background';
             component = <LogoutContainer />;
+            break;
+        case 'editbillform':
+            modal_class = 'billform-background';
+            component = <EditBillContainer billid={id} />;
             break;
         default:
             return null;

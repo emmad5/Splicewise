@@ -13,7 +13,8 @@ const mapDispatchToProps = dispatch => {
         closeModal: () => dispatch(closeModal()),
         clearBillErrors: () => dispatch(clearBillErrors()),
         fetchBills: () => dispatch(fetchBills()),
-        deleteBill: (id) => dispatch(deleteBill(id))
+        deleteBill: (id) => dispatch(deleteBill(id)),
+        openModal: (modal) => dispatch(openModal(modal))
     };
 };
 

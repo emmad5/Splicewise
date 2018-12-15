@@ -26,7 +26,7 @@ class Api::BillsController < ApplicationController
         render json: ['can not find bill'] unless @bill
         if current_user.id === @bill.creator_id
             @bill.destroy
-            render :show
+            render json: @bill
         else
             render json: ['You did not create this bill'], status: 422
         end
