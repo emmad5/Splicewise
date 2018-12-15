@@ -11,7 +11,7 @@ export const createBill = bill => dispatch => (
 );
 
 export const deleteBill = (id) => dispatch => (
-    ApiUtil.deleteBill(id).then((billId) => (dispatch(removeBill(billId))))
+    ApiUtil.deleteBill(id).then((bill) => (dispatch(removeBill(bill.id))))
 );
 
 export const updateBill = (bill) => dispatch => (

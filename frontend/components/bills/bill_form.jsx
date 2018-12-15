@@ -44,7 +44,7 @@ class BillForm extends React.Component {
                         </div>
                         <input className='desc' type="text" onChange={this.update('description')} placeholder="Enter a description" value={this.state.title} />
                     <div className='amount'><div className='dollar'>$</div>
-                    <input className="amtinput" type="text" onChange={this.update('balance')} placeholder="0.00" value={this.state.balance} />
+                    <input className="amtinput" type="number" step="0.01" onChange={this.update('balance')} placeholder="0.00" value={this.state.balance} />
                     </div>
                     <div className='paidby'>
                             Paid by <a className="you">you</a> and split <a className="you">equally</a>.

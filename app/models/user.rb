@@ -19,7 +19,9 @@ class User < ApplicationRecord
 
     has_many :bills,
     foreign_key: :creator_id,
-    class_name: :Bil
+    class_name: :Bill
+
+    has_many :payments
 
     def password=(password) 
         @password = password

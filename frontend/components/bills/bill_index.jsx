@@ -1,24 +1,23 @@
 import React from 'react';
+import BillIndexItem from './bill_index_item';
 
 
 class BillIndex extends React.Component {
     componentDidMount() {
         this.props.fetchBills();
     }
+ 
     constructor(props) {
         super(props);
 
     }
     renderbills() {
       
-        return (<ul className="allbills">
-            {this.props.bills.map(bill => {
-            return (<li className="eachbill">
-            {(bill.createdAt.split('T')[0].split('-').join('/'))}
-            <div className='description'>{bill.description}</div>
-            <div className='balance'>${bill.balance}</div></li>)}
-            )}
-        </ul>)
+        return (
+            <ul className='allbills'>
+                {this.props.bills.map(bill => <BillIndexItem bill={bill} deleteBill={this.props.deleteBill}/>)}
+            </ul>
+        )
     }
 
     render() {

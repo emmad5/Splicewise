@@ -2,7 +2,7 @@ class Api::BillsController < ApplicationController
 
     def create
         @bill = Bill.new(bill_params)
-        @bill.balance = @bill.balance.to_i
+        @bill.balance = @bill.balance.to_f
         @bill.creator_id = current_user.id
         if @bill.save
             render :show
@@ -24,9 +24,9 @@ class Api::BillsController < ApplicationController
     def destroy
         @bill = Bill.find(params[:id])
         render json: ['can not find bill'] unless @bill
-        if current_user.id === @bil.creator_id
-            bill.destroy
-            render :index
+        if current_user.id === @bill.creator_id
+            @bill.destroy
+            render :show
         else
             render json: ['You did not create this bill'], status: 422
         end
