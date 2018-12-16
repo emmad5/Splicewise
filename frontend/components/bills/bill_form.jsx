@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 class BillForm extends React.Component {
  
     constructor(props) {
         super(props);
-        this.state = {description: "", balance: "", };
+        this.state = {description: "", balance: "", username: ""};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
     }
@@ -13,11 +13,18 @@ class BillForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const bill = Object.assign({}, this.state);
-        this.props.createBill(bill).then(this.props.closeModal);
+        const username = this.state.username;
+        const amount = (this.state.balance / 2);
+        this.props.createBill(bill)
+            .then(bill => this.props.createPayment({ user_id: bill.creatorId, bill_id: bill.id, amount, paid: true }))
+            .then(payment => this.props.createPayment({ username, bill_id: payment.billId, amount}))
+            .then(this.props.closeModal);
     }
+
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value });
     }
+
     renderErrors() {
         return (
             <ul className="billerrors">
@@ -39,7 +46,7 @@ class BillForm extends React.Component {
                     <div className='innerbillform'>
                     <div className='addfriendscont'>
                         <label className='addfriendslabel'>With <strong>you</strong> and:
-                    <input className="addfriends" type="text" placeholder="Enter username"/>
+                    <input className="addfriends" type="text" placeholder="Enter username" onChange={this.update('username')} value={this.state.username}/>
                     </label>
                         </div>
                         <input className='desc' type="text" onChange={this.update('description')} placeholder="Enter a description" value={this.state.title} />

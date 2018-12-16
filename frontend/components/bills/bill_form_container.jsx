@@ -3,7 +3,7 @@ import React from 'react';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import BillForm from './bill_form';
 import { createBill, clearBillErrors } from '../../actions/bill_actions';
-
+import {createPayment} from '../../actions/payment_actions'
 const mapStateToProps = (state) => ({
 })
 const mapDispatchToProps = dispatch => {
@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => {
         createBill: (bill) => dispatch(createBill(bill)),
         closeModal: () => dispatch(closeModal()),
         clearBillErrors: () => dispatch(clearBillErrors()),
-
+        createPayment: (payment) => dispatch(createPayment(payment))
     };
 };
 

@@ -1,36 +1,46 @@
 .eachbill {
-    margin: 10px;
+    max-width: 520px;
+    min-width: 200px;
     height: 55px;
     font-size: 16px;
     font-weight: bold;
     display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 20px;
+  
 
 }
 
 .allbills {
     display: flex;
     flex-direction: column;
-}
-.balance {
-    margin-left: 50px;
-     padding-top: 5px;
+
 }
 .description {
-    margin-left: 50px;
-    padding-top: 5px;
+    padding-right: 15px;
+}
+.description:hover {
+    text-decoration: underline;
 }
 .date {
-    margin-left: 20px;
-    padding-top: 5px;
+
+    color: grey;
 }
 
 .delete {
     font-size: 24px;
     height: 18px;
-   margin-left: 10px;
+
     color: #CC4456;
    
 }
 .delete:hover {
     text-decoration: underline;
+}
+
+.billshow {
+    display: flex;
+    align-items: flex-start;
+
 }

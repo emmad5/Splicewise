@@ -142,6 +142,9 @@
     text-shadow: 0 -1px 0 #c83400;
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
 }
+.dash-button:hover {
+    background-color: #EB3D00;
+}
 .dash-settle-button{
     border: 1px grey solid;
     background-color: #5BC5A7;
@@ -159,6 +162,9 @@
     text-shadow: 0 -1px 0 #318970;
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
 
+}
+.dash-settle-button:hover {
+   background-color: #43BA98;
 }
 
 .logout {

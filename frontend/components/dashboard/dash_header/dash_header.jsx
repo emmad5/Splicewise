@@ -9,7 +9,7 @@ const DashHeader = ({openModal}) => {
             <nav className="dashtop">
                <h1 className="dashboardtitle">Dashboard</h1>
                 <button onClick={() => openModal('billform')} className='dash-button'>Add A Bill</button>
-                <button className='dash-settle-button'>Settle Up</button>
+                <a href="https://www.wikihow.com/Settle-an-Argument-with-Your-Wife" className='dash-settle-button'>Settle Up</a>
             </nav>
         </nav>
     );

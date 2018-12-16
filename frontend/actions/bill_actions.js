@@ -5,10 +5,13 @@ export const DELETE_BILL = 'DELETE_BILL';
 export const CLEAR_BILL_ERRORS = 'CLEAR_BILL_ERRORS';
 export const RECEIVE_BILLS = 'RECEIVE_BILLS';
 
-
 export const createBill = bill => dispatch => (
-    ApiUtil.createBill(bill).then(bill => (dispatch(receiveBill(bill))), errors => (dispatch(receiveBillErrors(errors.responseJSON))))
+    ApiUtil.createBill(bill).then(bill => {
+        dispatch(receiveBill(bill));
+        return bill;
+    }).fail(err => dispatch(receivebBillErrors(err.responseJSON)))
 );
+
 
 export const deleteBill = (id) => dispatch => (
     ApiUtil.deleteBill(id).then((bill) => (dispatch(removeBill(bill.id))))
@@ -29,7 +32,7 @@ export const fetchBills = () => dispatch => (
 const receiveBill = (bill) => ({
     type: RECEIVE_BILL,
     bill
-});4
+});
 
 
 const receiveBills = (bills) => ({
