@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DashHeaderContainer from './dash_header/dash_header_container';
-import BillIndexContainer from '../bills/bill_index_container'
+import BillIndexContainer from '../bills/bill_index_container';
+import UsersListContainer from './users_list_container';
 
 
 const Dashboard = ({ currentUser, logout, openModal }) => {
@@ -16,7 +17,7 @@ const Dashboard = ({ currentUser, logout, openModal }) => {
                 </div>
             </header>
             <nav className="main">
-            <nav className="left-nav"> <nav className='left-nav-img'></nav></nav>
+                <nav className="left-nav"> <nav className='left-nav-img'></nav><UsersListContainer/></nav>
             <nav className="main-nav">
             <DashHeaderContainer/>
             <BillIndexContainer/>
