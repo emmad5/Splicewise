@@ -17,7 +17,7 @@ class BillForm extends React.Component {
         const amount = (this.state.balance / 2);
         this.props.createBill(bill)
             .then(bill => this.props.createPayment({ user_id: bill.creatorId, bill_id: bill.id, amount, paid: true }))
-            .then(payment => this.props.createPayment({ username, bill_id: payment.billId, amount}))
+            .then(payment => this.props.createPayment({ username, bill_id: payment.billId, amount }))
             .then(this.props.closeModal);
     }
 
@@ -44,14 +44,22 @@ class BillForm extends React.Component {
                     <h2 className="add-a-bill">Add a bill
                     <button onClick={this.props.closeModal} className="X">X</button></h2>
                     <div className='innerbillform'>
+                        <div>{this.renderErrors()}</div>
                     <div className='addfriendscont'>
                         <label className='addfriendslabel'>With <strong>you</strong> and:
-                    <input className="addfriends" type="text" placeholder="Enter username" onChange={this.update('username')} value={this.state.username}/>
-                    </label>
+                            <input className="addfriends" type="text" placeholder="Enter username" onChange={this.update('username')} value={this.state.username}/>
+                        </label> 
+                    </div>
+                    <div className='midinput'>
+                        <div className="leftinput">
+                        
                         </div>
-                        <input className='desc' type="text" onChange={this.update('description')} placeholder="Enter a description" value={this.state.title} />
-                    <div className='amount'><div className='dollar'>$</div>
-                    <input className="amtinput" type="number" step="0.01" onChange={this.update('balance')} placeholder="0.00" value={this.state.balance} />
+                        <div className='rightinput'>
+                            <input className='desc' type="text" onChange={this.update('description')} placeholder="Enter a description" value={this.state.title} />
+                            <div className='amount'><div className='dollar'>$</div>
+                                <input className="amtinput" type="number" step="0.01" onChange={this.update('balance')} placeholder="0.00" value={this.state.balance} />
+                            </div>
+                        </div>
                     </div>
                     <div className='paidby'>
                             Paid by <a className="you">you</a> and split <a className="you">equally</a>.

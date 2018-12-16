@@ -9,7 +9,7 @@ export const createBill = bill => dispatch => (
     ApiUtil.createBill(bill).then(bill => {
         dispatch(receiveBill(bill));
         return bill;
-    }).fail(err => dispatch(receivebBillErrors(err.responseJSON)))
+    }).fail(err => dispatch(receiveBillErrors(err.responseJSON)))
 );
 
 

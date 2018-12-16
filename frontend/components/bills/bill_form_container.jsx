@@ -3,8 +3,10 @@ import React from 'react';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import BillForm from './bill_form';
 import { createBill, clearBillErrors } from '../../actions/bill_actions';
-import {createPayment} from '../../actions/payment_actions'
+import {createPayment} from '../../actions/payment_actions';
+
 const mapStateToProps = (state) => ({
+    errors: state.errors.session
 })
 const mapDispatchToProps = dispatch => {
     return {

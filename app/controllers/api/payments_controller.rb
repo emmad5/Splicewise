@@ -10,11 +10,18 @@ class Api::PaymentsController < ApplicationController
         end
  
         if @payment.user_id == nil
-            debugger
             user = User.find_by(username: params[:payment][:username])
-            @payment.user_id = user.id
-        end
-        if @payment.save 
+            if user
+                @payment.user_id = user.id
+                if @payment.save 
+                    render 'api/payments/show'
+                else
+                    render json: @payment.errors.full_messages, status: 422
+                end
+            else
+                render json: ['Invalid User'], status: 422
+            end
+        elsif @payment.save 
             render 'api/payments/show'
         else
             render json: @payment.errors.full_messages, status: 422

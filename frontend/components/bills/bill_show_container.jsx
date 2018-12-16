@@ -4,8 +4,7 @@ import BillShow from './bill_show';
 
 
 const mapStateToProps = (state) => ({
-    
-
+    payments: state.entities.payments
 });
 
 const mapDispatchToProps = dispatch => ({

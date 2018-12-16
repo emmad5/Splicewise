@@ -20,6 +20,7 @@ class Bill < ApplicationRecord
     foreign_key: :creator_id,
     class_name: :User
 
-    has_many :payments
+    has_many :payments,
+    dependent: :destroy
 
 end
