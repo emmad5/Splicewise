@@ -14,7 +14,7 @@ class UsersList extends React.Component {
 
 
     render () {
-        let usernames = this.props.users.map(user => <li className="eachfriend"><div className="userimg"></div>{user.username}</li>)
+        let usernames = this.props.users.map(user => <li key={user.id} className="eachfriend"><div className="userimg"></div>{user.username}</li>)
         return (
             <ul>
                 <Link to="/dashboard" className="dashlink"> <div className="logoimg2"></div>Dashboard</Link>

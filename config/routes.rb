@@ -5,6 +5,6 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :index]
     resource :session, only: [:create, :destroy, :show]
     resources :bills
-    resources :payments, only: [:create, :update]
+    resources :payments, only: [:create, :update, :show, :index]
   end
 end

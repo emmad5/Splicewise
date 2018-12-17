@@ -8,7 +8,7 @@ import EditBillContainer from './bills/edit_bill_container';
 
 
 
-function Modal({ modal, closeModal, id }) {
+function Modal({ modal, closeModal }) {
     if (!modal) {
         return null;
     }
@@ -29,7 +29,7 @@ function Modal({ modal, closeModal, id }) {
             break;
         case 'editbillform':
             modal_class = 'billform-background';
-            component = <EditBillContainer billid={id} />;
+            component = <EditBillContainer billid={modal.id} />;
             break;
         default:
             return null;

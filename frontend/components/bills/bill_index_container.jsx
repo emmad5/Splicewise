@@ -3,6 +3,7 @@ import React from 'react';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import BillIndex from './bill_index';
 import { createBill, clearBillErrors, fetchBills, deleteBill } from '../../actions/bill_actions';
+import {fetchPayments} from '../../actions/payment_actions';
 
 const mapStateToProps = (state) => ({
     bills: Object.values(state.entities.bills)
@@ -14,7 +15,9 @@ const mapDispatchToProps = dispatch => {
         clearBillErrors: () => dispatch(clearBillErrors()),
         fetchBills: () => dispatch(fetchBills()),
         deleteBill: (id) => dispatch(deleteBill(id)),
-        openModal: (modal) => dispatch(openModal(modal))
+        openModal: (modal) => dispatch(openModal(modal)),
+        fetchPayments: () => dispatch(fetchPayments())
+        
     };
 };
 

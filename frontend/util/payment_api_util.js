@@ -6,3 +6,16 @@ export const createPayment = (payment) => (
     })
 );
 
+export const fetchPayment = (id) => (
+    $.ajax({
+        method: "GET",
+        url: `api/payments${id}`
+    })
+)
+export const fetchPayments = () => (
+    $.ajax({
+        method: "GET",
+        url: `api/payments`
+    })
+)
+

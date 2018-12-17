@@ -5,6 +5,7 @@ import BillIndexItem from './bill_index_item';
 class BillIndex extends React.Component {
     componentDidMount() {
         this.props.fetchBills();
+        this.props.fetchPayments();
     }
  
     constructor(props) {
