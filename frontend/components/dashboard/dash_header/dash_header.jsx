@@ -8,8 +8,10 @@ const DashHeader = ({openModal}) => {
         <nav className="dashheader">
             <nav className="dashtop">
                <h1 className="dashboardtitle">Dashboard</h1>
-                <button onClick={() => openModal('billform')} className='dash-button'>Add A Bill</button>
-                <a href="https://www.wikihow.com/Settle-an-Argument-with-Your-Wife" className='dash-settle-button'>Settle Up</a>
+               <div className="dashbuttons">
+                    <button onClick={() => openModal('billform')} className='dash-button'>Add A Bill</button>
+                    <a href="https://www.wikihow.com/Settle-an-Argument-with-Your-Wife" className='dash-settle-button'>Settle Up</a>
+                </div>
             </nav>
         </nav>
     );

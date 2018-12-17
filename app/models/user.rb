@@ -19,7 +19,8 @@ class User < ApplicationRecord
 
     has_many :bills,
     foreign_key: :creator_id,
-    class_name: :Bill
+    class_name: :Bill,
+    dependent: :destroy
 
     has_many :payments
 

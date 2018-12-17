@@ -28,7 +28,7 @@ class BillIndexItem extends React.Component {
     }
 
     render() {
-        const date = new Date(this.props.bill.createdAt).toDateString();
+        const date = new Date(this.props.bill.createdAt).toDateString().split('201')[0];
         return (
                 <li className="eachbill">
                 <div className='date'>{date}</div>
