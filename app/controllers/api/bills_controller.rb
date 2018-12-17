@@ -12,7 +12,12 @@ class Api::BillsController < ApplicationController
     end
 
     def index
-        @bills = Bill.all
+        payments = Payment.where(user_id: current_user.id)
+        bill_ids = []
+        payments.each do |payment|
+            bill_ids.push(payment.bill_id)
+        end
+        @bills = Bill.where(creator_id: current_user.id).or(Bill.where(id: bill_ids))
         render :index
     end
 

@@ -36,5 +36,13 @@
 .modal-child {
   position: absolute;
   top: 50px;
-  left: 63%;
+  right: 20%;
+  animation-name: example;
+  animation-duration: 0.4s;
+  opacity: 1;
+}
+@keyframes example {
+  from {opacity: 0.5;}
+  to {opacity: 1;}
+
 }

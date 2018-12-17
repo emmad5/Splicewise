@@ -94,6 +94,7 @@
  }
 
  .loginform {
+        transition: all 0.3s ease;
      display: flex;
      flex-direction: column;
      width: 300px;
@@ -102,7 +103,9 @@
      border-radius: 5px;
      border: 1px grey solid;
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+ 
  }
+
  .loginsubmit {
      background-color: #5BC5A7;
      padding: 2px;
