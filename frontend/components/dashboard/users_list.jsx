@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 
 class UsersList extends React.Component {
@@ -7,15 +8,19 @@ class UsersList extends React.Component {
     }
 
 
-   
+    componentDidMount() {
+        this.props.fetchUsers();
+    }
 
 
     render () {
+        let usernames = this.props.users.map(user => <li className="eachfriend"><div className="userimg"></div>{user.username}</li>)
         return (
-            <div>
-                Users
-                {}
-            </div>
+            <ul>
+                <Link to="/dashboard" className="dashlink"> <div className="logoimg2"></div>Dashboard</Link>
+                <h1 className="friends">Friends</h1>
+                {usernames}
+            </ul>
         )
     }
 }

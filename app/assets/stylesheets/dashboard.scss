@@ -12,9 +12,9 @@
      background-color: #5BC5A7;
      color: white;
      position: relative;
-     border: 1px black solid;
-    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
- }
+    border-bottom: 1px #5BC5A7 solid;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 2px 4px rgba(0,0,0,.33);
+   }
  .logout {
     position: fixed;
     right: 130px;
@@ -31,8 +31,6 @@
 
  
  .username {
-
-
     padding-top: 0;
     margin-top: 0;
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -75,7 +73,7 @@
     width: 100px;
     height: 100px;
     z-index: 2;
-   border-left: .5px lightgrey solid;
+   border-left: 1px lightgrey solid;
 
 }
 .headimg{
@@ -121,6 +119,7 @@
 .dashtop {
    width: 100%;
    height: 64px;
+   border-top: 0;
    border-bottom: 1px lightgrey solid;
 
 }

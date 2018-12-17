@@ -17,7 +17,11 @@ const Dashboard = ({ currentUser, logout, openModal }) => {
                 </div>
             </header>
             <nav className="main">
-                <nav className="left-nav"> <nav className='left-nav-img'></nav><UsersListContainer/></nav>
+                <nav className="left-nav"> 
+                
+                <UsersListContainer/>
+                <nav className='left-nav-img'></nav>
+                </nav>
             <nav className="main-nav">
             <DashHeaderContainer/>
             <BillIndexContainer/>

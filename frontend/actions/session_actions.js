@@ -17,9 +17,10 @@ export const logout = () => dispatch => (
 export const signup = (user) => dispatch => (
     ApiUtil.signup(user).then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors.responseJSON)))
 );
-export const fetchUsers = () => dispatch => (
-    ApiUtil.fetchUsers().then(users => dispatch(receiveUsers(users)))
-)
+export const fetchUsers = () => dispatch => {
+    
+   return  ApiUtil.fetchUsers().then(users => dispatch(receiveUsers(users)))
+}
 
 const receiveCurrentUser = (user) => ({
     type: RECEIVE_CURRENT_USER,

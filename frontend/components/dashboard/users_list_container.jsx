@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import {fetchUsers} from '../../actions/session_actions';
 
 const mapStateToProps = (state) => ({
+    users: Object.values(state.entities.users)
 })
 
 const mapDispatchToProps = (dispatch) => ({
