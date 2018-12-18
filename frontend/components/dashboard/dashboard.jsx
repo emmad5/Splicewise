@@ -22,7 +22,7 @@ const Dashboard = ({ currentUser, logout, openModal }) => {
                 <UsersListContainer/>
                 <nav className='left-nav-img'></nav>
                 <nav className="invitenav">
-                        <h1 className='invitefriends'>Invite Friends</h1>
+                        <h1 className='invitefriends'>Invite Friends to Splicewise</h1>
                         <input type="text" className='emailadd' placeholder='Enter an email address'/>
                         <input className='submitemail' type="submit" value="Send invite"/>
                 </nav>

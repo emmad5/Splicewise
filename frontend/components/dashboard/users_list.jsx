@@ -15,10 +15,13 @@ class UsersList extends React.Component {
 
     render () {
         let usernames = this.props.users.map(user => <li key={user.id} className="eachfriend"><div className="userimg"></div>{user.username}</li>)
+        let friends = this.props.friends.map(friend => <li key={friend.id} className="eachfriend"><div className="userimg"></div>{friend.username}</li>)
         return (
             <ul>
                 <Link to="/dashboard" className="dashlink"> <div className="logoimg2"></div>Dashboard</Link>
                 <h1 className="friends">Friends</h1>
+                {friends}
+                <h1 className="friends">All Users</h1>
                 {usernames}
             </ul>
         )

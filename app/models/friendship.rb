@@ -7,12 +7,14 @@
 #  friend_id  :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  confirmed  :boolean
 #
 
 class Friendship < ApplicationRecord
-    validates :user_id, :friend_id, presence: true
     validates :friend_id, uniqueness: { scope: :user_id }
 
+    belongs_to :user
+    belongs_to :friend, class_name: :User
   
 
 end
