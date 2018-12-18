@@ -75,8 +75,10 @@
     background-repeat: no-repeat;
     width: 100px;
     height: 100px;
-    z-index: 2;
-   border-left: 1px lightgrey solid;
+   z-index: 2;
+   border-left: 0px;
+   margin: 30px;
+   border-left: 0px white solid;
 
 }
 .headimg{

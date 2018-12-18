@@ -2,7 +2,6 @@ class Api::PaymentsController < ApplicationController
 
     def create
         @payment = Payment.new(bill_id: params[:bill_id], amount: params[:amount], paid: params[:paid])
- 
         
         if @payment.save 
             render 'api/payments/show'
@@ -16,6 +15,7 @@ class Api::PaymentsController < ApplicationController
     end
 
     def index
+
         @payments = Payment.all
     end
 

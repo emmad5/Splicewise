@@ -1,4 +1,5 @@
 import React from 'react';
+import PaidByContainer from './paid_by_container'
 
 
 class BillForm extends React.Component {
@@ -8,9 +9,10 @@ class BillForm extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {description: "", balance: "", borrower: ""};
+        this.state = {description: "", balance: "", borrower: "", showComponent: false};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
+        this._onButtonClick = this._onButtonClick.bind(this);
     }
 
     handleSubmit(e) {
@@ -36,6 +38,19 @@ class BillForm extends React.Component {
             </ul>
         );
     }
+    _onButtonClick(e) {
+        e.preventDefault();
+        if (this.state.showComponent) {
+            this.setState({
+                showComponent: false,
+            });
+        } else {
+            this.setState({
+                showComponent: true,
+            });
+        }
+    }
+
 
     render() {
         return (
@@ -62,7 +77,15 @@ class BillForm extends React.Component {
                         </div>
                     </div>
                     <div className='paidby'>
-                    Paid by <a className="you">you</a> and split <a className="you">equally</a>.
+                            <div>Paid by </div>
+                            <div className='you'>
+                                <button onClick={this._onButtonClick}>you</button>
+                                {this.state.showComponent ?
+                                    <PaidByContainer user={this.state.borrower} /> :
+                                    null
+                                }
+                            </div>
+                            <div> and split</div>  <a className="equally">equally</a>.
                     </div>
                     </div>
                    <div className='buttons'>
@@ -71,6 +94,7 @@ class BillForm extends React.Component {
                     </div>
                     
                 </form>
+                
             </div>
         )
     }

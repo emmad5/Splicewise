@@ -8,8 +8,7 @@
     justify-content: space-between;
     margin-top: 20px;
     margin-left: 20px;
-  
-
+    border-bottom: 1px lightgrey solid;
 }
 
 .allbills {
@@ -32,9 +31,7 @@
 .delete {
     font-size: 24px;
     height: 18px;
-
-    color: #CC4456;
-   
+    color: #CC4456; 
 }
 .delete:hover {
     text-decoration: underline;

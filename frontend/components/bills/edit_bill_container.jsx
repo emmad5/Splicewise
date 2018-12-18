@@ -5,7 +5,7 @@ import EditBillForm from './edit_bill_form';
 import { updateBill, clearBillErrors, fetchBill } from '../../actions/bill_actions';
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
+    
     return  {
     }
 }

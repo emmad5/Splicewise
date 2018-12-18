@@ -106,19 +106,33 @@
    padding: 0px 4px;
    border: 1px grey dashed;
    color: #5BC5A7;
+   width: 35px;
+}
+.you:hover {
+   background-color: lightgrey;
+}
+.equally {
+   background: rgb(245, 242, 242);
+   border-radius: 100px;
+   padding: 0px 4px;
+   border: 1px grey dashed;
+   color: #5BC5A7;
+   width: 55px;
 }
 
 .paidby {
    font-size: 14px;
    margin-left: 40px;
-   padding-top: 30px;
+   padding-top: 20px;
    margin-bottom: 60px;
-
+   display: flex;
+   justify-content: space-between;
+   width: 200px;
+ 
 }
 .desc {
    font-size: 20px;
    padding: 20px 0px 0px 0px;
-
 }
 
 .midinput {
@@ -142,3 +156,53 @@
    text-decoration: underline;
 }
 
+
+.paidbyform {
+   position: fixed;
+   height: 200px;
+   width: 300px;
+
+   top: 100px;
+   right: 200px;
+   background: white;
+   border: 1px solid #999;
+   box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+   border-radius: 8px;
+}
+
+.choosepayer {
+    background: #5cc5a7;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #36977b;
+    text-shadow: 0 -1px 0 #318a71;
+    font-size: 18px;
+    font-weight: bold;
+   border-radius: 6px 6px 0px 0px;
+}
+
+.user {
+   font-size: 18px;
+   color: grey;
+  cursor: pointer;
+    font-weight: bold;
+      padding: 10px 10px 9px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+}
+.user:hover {
+ background: #eee;
+}
+.profileimg {
+   background: image_url('headimg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    margin-top: 3px;
+    margin-right: 5px;
+    border: .5px lightgrey solid;
+    border-radius: 9px;
+
+}

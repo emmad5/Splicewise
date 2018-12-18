@@ -4,7 +4,8 @@ import PaidBy from './paid_by';
 
 
 const mapStateToProps = (state, ownProps) => {
-
+    
+    return {currentUser: state.entities.users[state.session.id]};
 };
 
 const mapDispatchToProps = dispatch => ({
