@@ -2,6 +2,9 @@ import React from 'react'
 import BillShowContainer from './bill_show_container';
 
 class BillIndexItem extends React.Component {
+    componentDidMount() {
+        this.props.fetchPayments()
+    }
     constructor(props) {
         super(props);
         this.state = {

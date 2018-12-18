@@ -45,10 +45,11 @@ const removeBill = (billId) => ({
     billId
 });
 
-export const receiveBillErrors = (errors) => ({
-    type: RECEIVE_BILL_ERRORS,
-    errors
-});
+export const receiveBillErrors = (errors) => {
+    
+    return {type: RECEIVE_BILL_ERRORS,
+    errors}
+};
 
 export const clearBillErrors = () => ({
     type: CLEAR_BILL_ERRORS,

@@ -8,22 +8,16 @@ class BillForm extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {description: "", balance: "", username: ""};
+        this.state = {description: "", balance: "", borrower: ""};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        const bill = Object.assign({}, this.state);
-        const username = this.state.username;
-        const amount = (this.state.balance / 2);
-        if (username == '') {
-            return
-        }
-        this.props.createBill(bill)
-            .then(bill => this.props.createPayment({ user_id: bill.creatorId, bill_id: bill.id, amount, paid: true }))
-            .then(payment => this.props.createPayment({ username, bill_id: payment.billId, amount }))
+        const billparams = Object.assign({}, this.state);
+        
+        this.props.createBill(billparams)
             .then(this.props.closeModal);
     }
 
@@ -53,7 +47,7 @@ class BillForm extends React.Component {
                         <div>{this.renderErrors()}</div>
                     <div className='addfriendscont'>
                         <label className='addfriendslabel'>With <strong>you</strong> and:
-                            <input className="addfriends" type="text" placeholder="Enter username" onChange={this.update('username')} value={this.state.username}/>
+                            <input className="addfriends" type="text" placeholder="Enter username" onChange={this.update('borrower')} value={this.state.borrower}/>
                         </label> 
                     </div>
                     <div className='midinput'>

@@ -16,7 +16,7 @@ class BillIndex extends React.Component {
       
         return (
             <ul className='allbills'>
-                {this.props.bills.map(bill => <BillIndexItem key={bill.id} bill={bill} deleteBill={this.props.deleteBill} openModal={this.props.openModal}/>)}
+                {this.props.bills.map(bill => <BillIndexItem key={bill.id} bill={bill} deleteBill={this.props.deleteBill} openModal={this.props.openModal} fetchPayments={this.props.fetchPayments}/>)}
             </ul>
         )
     }
