@@ -29,7 +29,7 @@ function Modal({ modal, closeModal }) {
             break;
         case 'editbillform':
             modal_class = 'billform-background';
-            component = <EditBillContainer billid={modal.id} />;
+            component = <EditBillContainer />;
             break;
         default:
             return null;

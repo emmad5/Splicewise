@@ -31,14 +31,15 @@ class BillIndexItem extends React.Component {
         const date = new Date(this.props.bill.createdAt).toDateString().split('201')[0];
         return (
                 <li className="eachbill">
+                <div className='lefttwo'>
                 <div className='date'>{date}</div>
-
                 <div className='billshow'>
                     <button className='description' onClick={this._onButtonClick}>{this.props.bill.description}</button>
                     {this.state.showComponent ?
                         <BillShowContainer bill={this.props.bill} /> :
                         null
                     }
+                </div>
                 </div>
                     {/* <button className="delete" onClick={() => this.props.openModal('editbillform')}>Edit Bill</button> */}
                     <button className="delete" onClick={this.removeBill(this.props.bill.id)}>&#10005;</button>

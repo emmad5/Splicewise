@@ -4,9 +4,11 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import EditBillForm from './edit_bill_form';
 import { updateBill, clearBillErrors, fetchBill } from '../../actions/bill_actions';
 
-const mapStateToProps = (state, ownProps) => ({
-    billid: ownProps.billid
-})
+const mapStateToProps = (state, ownProps) => {
+    debugger
+    return  {
+    }
+}
 const mapDispatchToProps = dispatch => {
     return {
         updateBill: (bill) => dispatch(updateBill(bill)),

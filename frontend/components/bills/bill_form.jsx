@@ -2,7 +2,10 @@ import React from 'react';
 
 
 class BillForm extends React.Component {
- 
+    componentDidMount() {
+        this.props.clearErrors();
+    }
+
     constructor(props) {
         super(props);
         this.state = {description: "", balance: "", username: ""};
@@ -27,9 +30,9 @@ class BillForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul className="billerrors">
+            <ul className="errors">
                 {this.props.errors.map((error) => (
-                    <li className="billerror">
+                    <li className="error">
                         {error}
                     </li>
                 ))}

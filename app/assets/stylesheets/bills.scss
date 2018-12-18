@@ -19,12 +19,13 @@
 }
 .description {
     padding-right: 15px;
+    width: 80px;
 }
 .description:hover {
     text-decoration: underline;
 }
 .date {
-
+    margin-right: 50px;
     color: grey;
 }
 
@@ -44,9 +45,31 @@
     align-items: flex-start;
 
 }
+.lefttwo {
+    display: flex;
+}
 .billflex {
 display: flex;
-flex-direction: column;
+flex-direction: row;
 font-size: 13px;
 font-weight: lighter;
+}
+.balance {
+    font-size: 12px;
+    width: 100px;
+    color: rgb(68, 67, 67);
+    line-height: 15px;
+}
+
+.positive {
+   
+    color: #5bc5a7;
+    font-weight: bold;
+    font-size: 16px;
+}
+.negative {
+   
+    color: #ff652f;
+    font-weight: bold;
+    font-size: 16px;
 }

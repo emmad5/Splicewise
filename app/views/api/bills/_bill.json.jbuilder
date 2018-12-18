@@ -1,5 +1,6 @@
 
-json.extract! bill, :id, :description, :balance, :settled, :category, :creator_id, :created_at
+json.extract! bill, :id, :description, :settled, :category, :creator_id, :created_at
+json.balance ('%.2f' % bill.balance)
 
   json.payments(bill.payments) do |payment|
     json.id payment.id
