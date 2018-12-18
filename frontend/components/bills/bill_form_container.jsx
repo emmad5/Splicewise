@@ -14,7 +14,8 @@ const mapDispatchToProps = dispatch => {
         createBill: (bill) => dispatch(createBill(bill)),
         closeModal: () => dispatch(closeModal()),
         clearErrors: () => dispatch(clearErrors()),
-        createPayment: (payment) => dispatch(createPayment(payment))
+        createPayment: (payment) => dispatch(createPayment(payment)),
+        openModal: (modal) => dispatch(openModal(modal))
     };
 };
 

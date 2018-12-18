@@ -65,7 +65,7 @@ class BillForm extends React.Component {
                         </div>
                     </div>
                     <div className='paidby'>
-                            Paid by <a className="you">you</a> and split <a className="you">equally</a>.
+                    Paid by <a className="you">you</a> and split <a className="you">equally</a>.
                     </div>
                     </div>
                    <div className='buttons'>
@@ -81,3 +81,6 @@ class BillForm extends React.Component {
 }
 
 export default BillForm;
+
+
+// {/* <button onClick={() => this.props.openModal('paidby')} className="you">you</button> */}
