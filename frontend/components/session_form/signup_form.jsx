@@ -56,7 +56,7 @@ class SignupForm extends React.Component {
                     <button onClick={this.handleSubmit2} className="loginbutton">Demo</button>
                     <br/>
                     <br/>
-                    <a href="https://i.ytimg.com/vi/hbYK-JzFtPg/maxresdefault.jpg" className='terms'>By signing up, you accept the Splicewise Terms of Service.</a>
+                    <a href="https://i.ytimg.com/vi/hbYK-JzFtPg/maxresdefault.jpg" target="_blank" className='terms'>By signing up, you accept the Splicewise Terms of Service.</a>
                 </form>
             </div>
         )

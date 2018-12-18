@@ -18,6 +18,9 @@ class BillForm extends React.Component {
         const bill = Object.assign({}, this.state);
         const username = this.state.username;
         const amount = (this.state.balance / 2);
+        if (username == '') {
+            return
+        }
         this.props.createBill(bill)
             .then(bill => this.props.createPayment({ user_id: bill.creatorId, bill_id: bill.id, amount, paid: true }))
             .then(payment => this.props.createPayment({ username, bill_id: payment.billId, amount }))
