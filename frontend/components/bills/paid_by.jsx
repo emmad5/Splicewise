@@ -10,16 +10,17 @@ class PaidBy extends React.Component {
         <div className='paidbyform'>
         
             <h2 className='choosepayer'>Choose Payer</h2>
-            <p className="user">
+            <div className="user">
             <div className='profileimg'></div>
             {this.props.currentUser.username}
             
-            </p>
-            <p className="user">
+            </div>
+                <button onClick={this.props.set(this.props.user)}>
+            <div className="user">
             <div className='profileimg'></div>
             {this.props.user}
-            </p>
-        
+            </div>
+                </button>
         
         </div>
         )

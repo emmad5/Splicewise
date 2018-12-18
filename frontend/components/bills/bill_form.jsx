@@ -9,10 +9,11 @@ class BillForm extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {description: "", balance: "", borrower: "", showComponent: false};
+        this.state = {description: "", balance: "", borrower: "", showComponent: false, payer: ""};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
         this._onButtonClick = this._onButtonClick.bind(this);
+        this.set = this.set.bind(this);
     }
 
     handleSubmit(e) {
@@ -50,7 +51,15 @@ class BillForm extends React.Component {
             });
         }
     }
-
+    set(arg) {
+        let that = this;
+        return (e) => {
+            e.preventDefault();
+            that.setState({payer: arg})
+            that.setState({showComponent: false})
+        }
+      
+    }
 
     render() {
         return (
@@ -81,7 +90,7 @@ class BillForm extends React.Component {
                             <div className='you'>
                                 <button onClick={this._onButtonClick}>you</button>
                                 {this.state.showComponent ?
-                                    <PaidByContainer user={this.state.borrower} /> :
+                                    <PaidByContainer set={this.set} user={this.state.borrower} /> :
                                     null
                                 }
                             </div>
