@@ -5,10 +5,10 @@ class Api::BillsController < ApplicationController
         @bill = Bill.new(bill_params)
         @bill.balance = @bill.balance.to_f
         @bill.creator_id = current_user.id
-        if User.find_by(username: params[:bill][:borrower]) == nil
+        if User.find_by(username: params[:bill][:borrower]) == nil || User.find_by(username: params[:bill][:payer]) == nil
             render json: ['user does not exist'], status: 402
         elsif @bill.save      
-            @payment1 = Payment.new(user_id: current_user.id, bill_id: @bill.id, amount: (@bill.balance / 2.00), paid: true)
+            @payment1 = Payment.new(user_id: (User.find_by(username: params[:bill][:payer]).id), bill_id: @bill.id, amount: (@bill.balance / 2.00), paid: true)
             @payment2 = Payment.new(user_id: (User.find_by(username: params[:bill][:borrower]).id), bill_id: @bill.id, amount: (@bill.balance / 2.00))
             if @payment1.save && @payment2.save
                 render :show

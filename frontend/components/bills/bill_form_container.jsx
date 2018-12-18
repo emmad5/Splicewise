@@ -7,7 +7,8 @@ import {createPayment} from '../../actions/payment_actions';
 import {clearErrors} from '../../actions/session_actions';
 
 const mapStateToProps = (state) => ({
-    errors: state.errors.session
+    errors: state.errors.session,
+    currentUser: state.entities.users[state.session.id]
 })
 const mapDispatchToProps = dispatch => {
     return {

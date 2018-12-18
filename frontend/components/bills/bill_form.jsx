@@ -9,7 +9,7 @@ class BillForm extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {description: "", balance: "", borrower: "", showComponent: false, payer: ""};
+        this.state = {description: "", balance: "", borrower: "", showComponent: false, payer: this.props.currentUser.username};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
         this._onButtonClick = this._onButtonClick.bind(this);
@@ -51,17 +51,19 @@ class BillForm extends React.Component {
             });
         }
     }
-    set(arg) {
+    set(payer, borrower) {
         let that = this;
         return (e) => {
             e.preventDefault();
-            that.setState({payer: arg})
+            that.setState({payer: payer})
+            that.setState({borrower: borrower})
             that.setState({showComponent: false})
         }
       
     }
 
     render() {
+    
         return (
             <div>
                 <form onSubmit={this.handleSubmit} className="billform">
@@ -71,7 +73,7 @@ class BillForm extends React.Component {
                         <div>{this.renderErrors()}</div>
                     <div className='addfriendscont'>
                         <label className='addfriendslabel'>With <strong>you</strong> and:
-                            <input className="addfriends" type="text" placeholder="Enter username" onChange={this.update('borrower')} value={this.state.borrower}/>
+                            <input className="addfriends" type="text" placeholder="Enter username" onChange={this.update('borrower')} />
                         </label> 
                     </div>
                     <div className='midinput'>
@@ -88,9 +90,9 @@ class BillForm extends React.Component {
                     <div className='paidby'>
                             <div>Paid by </div>
                             <div className='you'>
-                                <button onClick={this._onButtonClick}>you</button>
+                                <button onClick={this._onButtonClick}>{this.state.payer}</button>
                                 {this.state.showComponent ?
-                                    <PaidByContainer set={this.set} user={this.state.borrower} /> :
+                                    <PaidByContainer set={this.set} borrower={this.state.borrower} payer={this.state.payer}  /> :
                                     null
                                 }
                             </div>
