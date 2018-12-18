@@ -22,7 +22,7 @@ export const fetchUsers = () => dispatch => {
    return  ApiUtil.fetchUsers().then(users => dispatch(receiveUsers(users)))
 }
 
-const receiveCurrentUser = (user) => ({
+export const receiveCurrentUser = (user) => ({
     type: RECEIVE_CURRENT_USER,
     user
 });

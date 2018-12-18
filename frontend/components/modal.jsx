@@ -6,6 +6,7 @@ import BillFormContainer from './bills/bill_form_container';
 import LogoutContainer from './dashboard/logout_container';
 import EditBillContainer from './bills/edit_bill_container';
 import PaidByContainer from './bills/paid_by_container';
+import FriendFormContainer from './dashboard/friend_form_container';
 
 
 
@@ -35,6 +36,10 @@ function Modal({ modal, closeModal }) {
         case 'paidby':
             modal_class = 'modal-background';
             component = <PaidByContainer />;
+            break;
+        case 'addfriend':
+            modal_class = 'billform-background';
+            component = <FriendFormContainer />;
             break;
         default:
             return null;
