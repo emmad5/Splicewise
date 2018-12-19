@@ -14,3 +14,8 @@ export const acceptFriend = friend => dispatch => (
     })
 );
 
+export const removeFriend = id => dispatch => (
+    ApiUtil.removeFriend(id).then(user => {
+        dispatch(receiveCurrentUser(user));
+    })
+);

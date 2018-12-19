@@ -26,8 +26,14 @@ class Api::FriendshipsController < ApplicationController
 
 
     def destroy
-        @friendship = Friendship.find(params[:id])
+        @friendship = Friendship.find_by(user_id: params[:id], friend_id: current_user.id)
+        if !@friendship 
+            @friendship = Friendship.find_by(friend_id: params[:id], user_id: current_user.id)
+        end
+        
         @friendship.destroy
+        @user = current_user
+        render '/api/users/show/'
     end
 
 end

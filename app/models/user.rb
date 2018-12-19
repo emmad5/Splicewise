@@ -68,12 +68,6 @@ class User < ApplicationRecord
         inverse_friendships.map{|friendship| friendship.user if !friendship.confirmed}.compact
     end
 
- 
-
-    def friend?(user)
-        friends.include?(user)
-    end
-
     private
     
     def ensure_session_token

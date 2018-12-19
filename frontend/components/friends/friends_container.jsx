@@ -6,6 +6,7 @@ import {billsWithFriends} from '../../reducers/selectors';
 import {fetchBills} from '../../actions/bill_actions';
 import {fetchPayments} from '../../actions/payment_actions';
 import {clearBillErrors, deleteBill} from '../../actions/bill_actions';
+import {removeFriend} from '../../actions/friend_actions';
 
 
 
@@ -26,6 +27,7 @@ const mapDispatchToProps = (dispatch) => ({
     fetchPayments: () => dispatch(fetchPayments()),
     clearBillErrors: () => dispatch(clearBillErrors()),
     deleteBill: (id) => dispatch(deleteBill(id)),
+    removeFriend: (id) => dispatch(removeFriend(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FriendShow);

@@ -3,6 +3,7 @@ import UsersListContainer from '../dashboard/users_list_container';
 import DashHeaderContainer from '../dashboard/dash_header/dash_header_container';
 import { billsWithFriends } from '../../reducers/selectors';
 import BillIndexItem from '../bills/bill_index_item';
+import {Link} from 'react-router-dom';
 
 class FriendShow extends React.Component {
     constructor(props) {
@@ -60,7 +61,9 @@ class FriendShow extends React.Component {
                         <nav className="main-nav-img"></nav>
                     </nav>
                     <nav className="right-nav">
-                        
+                    <Link to="/dashboard">
+                        <button className='delete-friend-button' onClick={() => this.props.removeFriend(this.props.friend.id)}>Remove This Friend</button>
+                    </Link>
                     </nav>
                 </nav>
                 
