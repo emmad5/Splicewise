@@ -11,18 +11,19 @@ const DashHeader = ({openModal, friend, payments, currentUser}) => {
         dashboard = <div className="dashheaderflex"><div className='profimg'></div>{friend}</div>;
         
     } else {
-         dashboard = "Dashboard";
-        payments.forEach(payment => {
-            if (payment.userId == currentUser.id && payment.paid == false) {
-                myPayments += Math.round(parseFloat(payment.amount))
-            }
-        })
-        payments.forEach(payment => {
-            if (payment.userId == currentUser.id && payment.paid == true) {
-                myOwed += Math.round(parseFloat(payment.amount))
-            }
-        })
+        dashboard = "Dashboard";
     }
+    
+    payments.forEach(payment => {
+        if (payment.userId == currentUser.id && payment.paid == false) {
+            myPayments += Math.round(parseFloat(payment.amount))
+        }
+    })
+    payments.forEach(payment => {
+        if (payment.userId == currentUser.id && payment.paid == true) {
+            myOwed += Math.round(parseFloat(payment.amount))
+        }
+    })
     return (
         <nav className="dashheader">
             <nav className="dashtop">

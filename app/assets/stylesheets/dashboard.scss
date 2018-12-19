@@ -101,7 +101,7 @@
 }
 .dashheaderflex {
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
 }
 .profimg {
     background: image_url('headimg.png');
@@ -209,10 +209,7 @@
     color: white;
 }
 
-.dashbottom {
-   height: 100px;
-   display: flex;
-}
+
 
 .invitenav {
    border: 1px lightgrey solid;
