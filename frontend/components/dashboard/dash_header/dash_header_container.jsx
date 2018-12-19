@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import {openModal } from '../../../actions/modal_actions'
 
 const mapStateToProps = (state, ownProps) => ({
-    friend: ownProps.friend
+    friend: ownProps.friend,
+    currentUser: state.entities.users[state.session.id],
+    payments: Object.values(state.entities.payments)
 })
 
 const mapDispatchToProps = (dispatch) => ({

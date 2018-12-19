@@ -101,6 +101,7 @@
 }
 .dashheaderflex {
    display: flex;
+   flex-direction: column;
 }
 .profimg {
     background: image_url('headimg.png');
@@ -208,6 +209,11 @@
     color: white;
 }
 
+.dashbottom {
+   height: 100px;
+   display: flex;
+}
+
 .invitenav {
    border: 1px lightgrey solid;
    margin-right: 15px;
@@ -253,4 +259,32 @@
    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
 
 
+}
+.dashbottom {
+   height: 48px;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.flexowed {
+   display: flex;
+   flex-direction: column;
+   font-size: 14px;
+   margin: 0;
+   padding: 0px;
+   text-align: center;
+}
+
+.titleowe {
+   font-size: 13px;
+   color: rgb(105, 104, 104);
+   padding-top: 4px;
+}
+.ioweyou {
+   color: #ff652f;
+   font-weight: bold;
+}
+.youoweme {
+   color: #5bc5a7;
+   font-weight: bold;
 }
