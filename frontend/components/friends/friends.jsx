@@ -1,5 +1,6 @@
 import React from 'react';
 import UsersListContainer from '../dashboard/users_list_container';
+import DashHeaderContainer from '../dashboard/dash_header/dash_header_container';
 
 class FriendShow extends React.Component {
     constructor(props) {
@@ -7,6 +8,10 @@ class FriendShow extends React.Component {
     }
 
     render() {
+        let friend;
+        if (this.props.friend) {
+            friend = this.props.friend.username;
+        }
         return (
             <div>
                 <header className="dashboard-header">
@@ -28,7 +33,11 @@ class FriendShow extends React.Component {
                         </nav>
                     </nav>
                     <nav className="main-nav">
+                        <DashHeaderContainer friend={friend} />
                         
+                        <div>
+                           
+                        </div>
                         <nav className="main-nav-img"></nav>
                     </nav>
                     <nav className="right-nav">

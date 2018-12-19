@@ -4,8 +4,9 @@ import {logout} from '../../actions/session_actions';
 import {openModal} from '../../actions/modal_actions';
 
 
-const mapStateToProps = (state) => ({
-    currentUser: state.entities.users[state.session.id]
+const mapStateToProps = (state, ownProps) => ({
+    currentUser: state.entities.users[state.session.id],
+    friend: state.entities.users[ownProps.match.params.friendId]
 })
 
 const mapDispatchToProps = (dispatch) => ({

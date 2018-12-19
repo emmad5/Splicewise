@@ -2,7 +2,8 @@ import DashHeader from './dash_header';
 import { connect } from 'react-redux';
 import {openModal } from '../../../actions/modal_actions'
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
+    friend: ownProps.friend
 })
 
 const mapDispatchToProps = (dispatch) => ({
