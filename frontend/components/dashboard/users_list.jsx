@@ -21,9 +21,13 @@ class UsersList extends React.Component {
         
         let friendRequests = this.props.friendRequests.map(friend => {
          return (<li key={friend.id} className="eachfriend">
+             <div className='eachflex'>
             <div className="userimg"></div>
+            
             {friend.username}
-            <button onClick={() => this.props.acceptFriend(friend)} className='accept'>A</button>
+             </div>
+            <button onClick={() => this.props.acceptFriend(friend)} className='accept'>accept </button>
+            
         </li>)
         })
         return (

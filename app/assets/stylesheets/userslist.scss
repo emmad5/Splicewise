@@ -22,14 +22,20 @@
     padding: 3px 8px 2px 8px;
     text-decoration: none;
     border-left: 6px solid #fff;
-    height: 20px;
-    margin-bottom: 7px;
+    height: 24px;
+    margin-bottom: 10px;
     cursor: pointer;
     width: 172px;
+    display: flex;
+    justify-content: space-between;
+ 
 
 }
 .eachfriend:hover {
     background: #eee;
+}
+.eachflex {
+    display: flex;
 }
 
 .userimg {
@@ -154,11 +160,14 @@
     margin-bottom: 0;
 }
 .accept {
-    font-size: 14px;
-    color: #EB3D00;
-    z-index: 10;
-    margin-left: 20px;
+    background: #ff652f;
+    color: white;
+    padding: 2px;
+    border: 1px white solid;
+    border-radius: 5px;
+    font-size: 11px;
+
 }
 .accept:hover {
-    background: black;
+    background: #EB3D00;
 }
