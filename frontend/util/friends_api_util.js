@@ -4,12 +4,15 @@ export const addFriend = (friend) => (
         url: '/api/friendships',
         data: friend
     })
-)
+);
 
-export const fetchFriendships = () => (
+export const acceptFriend = (friendship) => (
     $.ajax({
-        method: 'GET',
-        url: '/api/friendships'
+        method: 'PATCH',
+        url: `/api/friendships/${friendship.id}`,
+        data: friendship
     })
-)
+);
+
+
 

@@ -19,14 +19,21 @@ class FriendForm extends React.Component {
     render() {
        return( 
         <div className="addfriendformdiv">
-               <h1 className="addfriendh1">Add friend</h1>
+    
+               <div className="addfriendh1">  <div className='divflexfriends'>
+                   <div className='logoaddfriend'></div>
+                   <h1 className='addafriendh1'>Add friend</h1>
+                   </div>
+             
+                   <button onClick={this.props.closeModal} className="X" className="xcolor">x</button>
+                   </div>
                <form className="friendform" onSubmit={this.handleSubmit}>
             <label className="tolabel">
                 To:
                 <input type="text" onChange={(e) => this.setState({ friend: e.currentTarget.value})} placeholder=" enter username"/>
             </label>
               
-            <input className='addfriendsubmit' value="Send Invite and Add Friend" type="submit"/>
+            <input className='addfriendsubmit' value="Add Friend" type="submit"/>
         </form>
         </div>
        )

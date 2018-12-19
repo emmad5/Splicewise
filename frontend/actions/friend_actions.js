@@ -8,3 +8,9 @@ export const addFriend = friend => dispatch => (
     })
 );
 
+export const acceptFriend = friend => dispatch => (
+    ApiUtil.acceptFriend(friend).then(user => {
+        dispatch(receiveCurrentUser(user));
+    })
+);
+
