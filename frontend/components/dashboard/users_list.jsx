@@ -17,7 +17,7 @@ class UsersList extends React.Component {
     render () {
         
         let usernames = this.props.users.map(user => <li key={user.id} className="eachfriend"><div className="userimg"></div>{user.username}</li>)
-        let friends = this.props.friends.map(friend => <li key={friend.id} className="eachfriend"><div className="userimg"></div>{friend.username}</li>)
+        let friends = this.props.friends.map(friend => <Link to={`/friends/${friend.id}`} key={friend.id} className="eachfriend"><div className="userimg"></div>{friend.username} </Link>)
         
         let friendRequests = this.props.friendRequests.map(friend => {
          return (<li key={friend.id} className="eachfriend">
