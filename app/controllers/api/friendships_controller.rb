@@ -1,14 +1,20 @@
 class Api::FriendshipsController < ApplicationController
 
     def create
-
-        @friendship = Friendship.new(user_id: current_user.id, friend_id: User.find_by(username: params[:friend]).id)
         
-        if @friendship.save
-            @user = current_user
-            render '/api/users/show/'
+        if !User.find_by(username: params[:friend])
+            render json: ['User does not exist'], status: 422  
+        elsif current_user.pending_friends.include?(User.find_by(username: params[:friend]))
+            render json: ['You already added this friend!'], status: 422  
         else
-            render json: @friendship.errors.full_messages
+            @friendship = Friendship.new(user_id: current_user.id, friend_id: User.find_by(username: params[:friend]).id)
+        
+            if @friendship.save
+                @user = current_user
+                render '/api/users/show/'
+            else
+                render json: ['User does not exist'], status: 422
+            end
         end
     end
 

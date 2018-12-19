@@ -53,7 +53,6 @@ class LoginForm extends React.Component {
                 <input type="submit" className="loginsubmit" value="Log In to Splicewise"/>
                     <button className="demo" onClick={this.handleSubmit2}>Demo Login</button>
                 </form>
-
             </div>
         )
     }
