@@ -95,6 +95,21 @@
     padding: 10px;
 
 }
+.dashheaderflex {
+   display: flex;
+}
+.profimg {
+    background: image_url('headimg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 33px;
+    z-index: 2;
+    margin-right: 10px;
+    border: .5px lightgrey solid;
+    border-radius: 100px;
+    
+}
 
 .dashheader {
    width: 100%;

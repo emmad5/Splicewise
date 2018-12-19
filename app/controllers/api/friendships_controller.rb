@@ -13,9 +13,8 @@ class Api::FriendshipsController < ApplicationController
     end
 
    def update
-    @friendship = Friendship.find_by(user_id: User.find(params[:id]).id)  
+    @friendship = Friendship.find_by(user_id: User.find(params[:id]).id, friend_id: current_user.id)  
     @friendship.confirmed = true
-    
     if @friendship.save
         @user = current_user
         render '/api/users/show/'

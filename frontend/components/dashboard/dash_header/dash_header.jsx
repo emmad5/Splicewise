@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const DashHeader = ({openModal, friend}) => {
     let dashboard;
     if (friend) {
-         dashboard = friend;
+        dashboard = <div className="dashheaderflex"><div className='profimg'></div>{friend}</div>;
     } else {
          dashboard = "Dashboard";
     }
