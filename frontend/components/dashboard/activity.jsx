@@ -15,7 +15,7 @@ class Activity extends React.Component {
                     <h3></h3>
                     <div className="usernameimg">
                         <div className="headimg"></div>
-                        <button onClick={() => this.props.openModal('logout')} className='username'>{this.props.currentUser.username}! &#x25BE;</button>
+                        <button onClick={() => this.props.openModal('logout')} className='username'>{this.props.currentUser.username}! <i class="fas fa-caret-down"></i></button>
                     </div>
                 </header>
 
@@ -29,13 +29,17 @@ class Activity extends React.Component {
                             <input type="text" className='emailadd' placeholder='Enter an email address' />
                             <input className='submitemail' type="submit" value="Send invite" />
                         </nav>
+                        <br/>
+                        <div className='buttonflex'>
+                        <a href="https://www.linkedin.com/in/emma-deas-49020a133/" target="_blank" className='linkedin'>Linked <i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/emmad5" target="_blank" className='linkedin github'>Github <i class="fab fa-github"></i></a>
+                        </div>
                     </nav>
                     <nav className="main-nav">
                         <nav className="dashheader">
                             <nav className="dashtop">
                                 <h1 className="dashboardtitle">Recent Activity</h1>
                             
-                          
                             </nav>
                        
                         </nav>
