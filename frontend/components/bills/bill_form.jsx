@@ -10,7 +10,7 @@ class BillForm extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {description: "", balance: "", borrower: "", showComponent: false, payer: this.props.currentUser.username, showCategory: false};
+        this.state = { description: "", balance: "", borrower: "", showComponent: false, payer: this.props.currentUser.username, showCategory: false, category: 'Uncategorized'};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
         this._onButtonClick = this._onButtonClick.bind(this);
@@ -103,7 +103,7 @@ class BillForm extends React.Component {
                     </div>
                     <div className='midinput'>
                         <div >
-                                <button className="leftinput" onClick={this._onCategoryClick}></button>
+                                <button className={`${this.state.category}2`} onClick={this._onCategoryClick}></button>
                                 {this.state.showCategory ?
                                     <CategoryContainer setCategory={this.setCategory} category={this.state.category} /> :
                                     null

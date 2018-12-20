@@ -3,7 +3,7 @@ import BillShowContainer from './bill_show_container';
 
 class BillIndexItem extends React.Component {
     componentDidMount() {
-        this.props.fetchPayments()
+        this.props.fetchPayments();
     }
     constructor(props) {
         super(props);
@@ -12,7 +12,7 @@ class BillIndexItem extends React.Component {
             category: this.props.bill.category
         };
         this._onButtonClick = this._onButtonClick.bind(this);
-        this.setCategoryImg = this.setCategoryImg.bind(this)
+      
     }
 
     removeBill(billId) {
@@ -29,16 +29,6 @@ class BillIndexItem extends React.Component {
             this.setState({
                 showComponent: true,
             });
-        }
-    }
-    setCategoryImg() {
-        return {
-            Uncategorized: 'general.png',
-            FoodandDrink: 'dining-out.png',
-            Home: 'mortgage.png', 
-            Life: 'music.png', 
-            Transportation: 'taxi.png', 
-            Utilities: 'electricity.png'
         }
     }
 

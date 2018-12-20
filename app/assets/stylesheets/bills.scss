@@ -20,8 +20,8 @@
     padding-right: 15px;
     padding-left: 15px;
     margin-right: 10px;
-    width: 80px;
-    margin-top: 10px;
+    width: 100px;
+    margin-top: 6px;
 }
 .description:hover {
     text-decoration: underline;
@@ -31,6 +31,7 @@
     color: grey;
     width: 100px;
     display: flex;
+   
 }
 
 .delete {
@@ -123,4 +124,76 @@ font-weight: lighter;
     width: 50px;
     height: 50px;
     z-index: 2;  
+}
+.Uncategorized2 {
+     background: image_url('general.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 100px;
+    z-index: 2;
+     margin: 20px;
+    margin-right: 40px;
+    border: 2px white solid;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.Home2 {
+    background: image_url('mortgage.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 100px;
+    z-index: 2;
+     margin: 20px;
+    margin-right: 40px;
+    border: 2px white solid;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.Life2 {
+    background: image_url('music.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 100px;
+    z-index: 2;
+     margin: 20px;
+    margin-right: 40px;
+    border: 2px white solid;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.Utilities2 {
+    background: image_url('electricity.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 100px;
+    z-index: 2;
+     margin: 20px;
+    margin-right: 40px;
+    border: 2px white solid;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.Transportation2 {
+    background: image_url('taxi.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 100px;
+    z-index: 2;
+    margin: 20px;
+    margin-right: 40px;
+    border: 2px white solid;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.Food.and.Drink2 {
+    background: image_url('dining-out.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 100px;
+    z-index: 2; 
+     margin: 20px;
+    margin-right: 40px;
+    border: 2px white solid;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
