@@ -21,14 +21,16 @@
     padding-left: 15px;
     margin-right: 10px;
     width: 80px;
+    margin-top: 10px;
 }
 .description:hover {
     text-decoration: underline;
 }
 .date {
-    margin-right: 40px;
+    margin-right: 10px;
     color: grey;
     width: 100px;
+    display: flex;
 }
 
 .delete {
@@ -72,4 +74,45 @@ font-weight: lighter;
     color: #ff652f;
     font-weight: bold;
     font-size: 16px;
+}
+
+.Uncategorized {
+     background: image_url('general.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+.Home {
+     background: image_url('mortgage.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+.Life {
+     background: image_url('music.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+.Utilities {
+     background: image_url('electricity.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+.Transportation {
+     background: image_url('taxi.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
 }

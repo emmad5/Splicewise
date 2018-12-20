@@ -8,9 +8,11 @@ class BillIndexItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            showComponent: false
+            showComponent: false,
+            category: this.props.bill.category
         };
         this._onButtonClick = this._onButtonClick.bind(this);
+        this.setCategoryImg = this.setCategoryImg.bind(this)
     }
 
     removeBill(billId) {
@@ -29,13 +31,25 @@ class BillIndexItem extends React.Component {
             });
         }
     }
+    setCategoryImg() {
+        return {
+            Uncategorized: 'general.png',
+            FoodandDrink: 'dining-out.png',
+            Home: 'mortgage.png', 
+            Life: 'music.png', 
+            Transportation: 'taxi.png', 
+            Utilities: 'electricity.png'
+        }
+    }
 
     render() {
         const date = new Date(this.props.bill.createdAt).toDateString().split('201')[0];
         return (
                 <li className="eachbill">
                 <div className='lefttwo'>
-                <div className='date'>{date}</div>
+                <div className='date'>{date}
+                <div className={this.props.bill.category}></div>
+                    </div>
                 <div className='billshow'>
                     <button className='description' onClick={this._onButtonClick}>{this.props.bill.description}</button>
                     {this.state.showComponent ?
