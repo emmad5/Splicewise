@@ -8,6 +8,7 @@ import FriendsContainer from './friends/friends_container'
 import Modal from './modal';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
+import ActivityContainer from './dashboard/activity_container';
 
 const App = ({ store }) => (
         <Provider store={store}>
@@ -18,6 +19,7 @@ const App = ({ store }) => (
                     <AuthRoute path="/signup" component={SignupFormContainer} />
                     <ProtectedRoute path="/dashboard" component={DashboardContainer} />
                     <ProtectedRoute path="/friends/:friendId" component={FriendsContainer} />
+                    <ProtectedRoute path="/activity" component={ActivityContainer} />
                     <AuthRoute path="/" component={GreetingContainer} />
                 </Switch>
                 </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
 
@@ -32,7 +33,8 @@ class UsersList extends React.Component {
         })
         return (
             <ul>
-                <Link to="/dashboard" className="dashlink"> <div className="logoimg2"></div>Dashboard</Link>
+                <NavLink to="/dashboard" activeClassName='is-active'  className="dashlink"> <div className="logoimg2"></div>Dashboard</NavLink>
+                <NavLink to="/activity" className="dashlink" activeClassName='is-active'> <i className="fas fa-flag"></i>Recent Activity</NavLink>
                 <h1 className="friends">Friends
                 <button onClick={() => this.props.openModal('addfriend')}className="add-friend-button" >+ add</button>
                 </h1>
