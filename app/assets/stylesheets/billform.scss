@@ -161,7 +161,7 @@
    position: fixed;
    height: 307px;
    width: 300px;
-
+   border-radius: 8px 8px;
    top: 100px;
    right: 200px;
    background: white;
@@ -232,6 +232,7 @@
     border-right: 1px solid #bbb;
     color: #333333;
    border-bottom: 0;
+   border-bottom-left-radius: 8px;
  
 }
 .lastli:hover {

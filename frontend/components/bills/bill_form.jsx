@@ -51,6 +51,7 @@ class BillForm extends React.Component {
         } else {
             this.setState({
                 showComponent: true,
+                showCategory: false
             });
         }
     }
