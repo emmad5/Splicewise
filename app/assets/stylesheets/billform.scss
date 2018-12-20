@@ -159,7 +159,7 @@
 
 .paidbyform {
    position: fixed;
-   height: 200px;
+   height: 307px;
    width: 300px;
 
    top: 100px;
@@ -167,7 +167,7 @@
    background: white;
    border: 1px solid #999;
    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
-   border-radius: 8px;
+ 
 }
 
 .choosepayer {
@@ -206,4 +206,34 @@
     border: .5px lightgrey solid;
     border-radius: 9px;
 
+}
+
+.categoryli {
+    width: 154px;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    padding: 11px 10px 15px;
+    font-size: 14px;
+    border-right: 1px solid #bbb;
+    color: #333333;
+ 
+
+}
+.categoryli:hover {
+    background: #ccc;
+}
+.lastli {
+    width: 154px;
+    background: #fff;
+    cursor: pointer;
+    padding: 10px 10px 15px;
+    font-size: 14px;
+    border-right: 1px solid #bbb;
+    color: #333333;
+   border-bottom: 0;
+ 
+}
+.lastli:hover {
+    background: #ccc;
 }

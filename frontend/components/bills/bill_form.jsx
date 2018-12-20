@@ -1,5 +1,6 @@
 import React from 'react';
-import PaidByContainer from './paid_by_container'
+import PaidByContainer from './paid_by_container';
+import CategoryContainer from './category_container';
 
 
 class BillForm extends React.Component {
@@ -9,11 +10,13 @@ class BillForm extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {description: "", balance: "", borrower: "", showComponent: false, payer: this.props.currentUser.username};
+        this.state = {description: "", balance: "", borrower: "", showComponent: false, payer: this.props.currentUser.username, showCategory: false};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
         this._onButtonClick = this._onButtonClick.bind(this);
+        this._onCategoryClick = this._onCategoryClick.bind(this);
         this.set = this.set.bind(this);
+        this.setCategory = this.setCategory.bind(this);
     }
 
     handleSubmit(e) {
@@ -61,7 +64,28 @@ class BillForm extends React.Component {
         }
       
     }
+    setCategory(category) {
+        let that = this
+        return (e) => {
+            e.preventDefault();
+            that.setState({category})
+            that.setState({ showCategory: false })
+        }
+    }
 
+    _onCategoryClick(e) {
+        e.preventDefault();
+        if (this.state.showCategory) {
+            this.setState({
+                showCategory: false,
+            });
+        } else {
+            this.setState({
+                showComponent: false,
+                showCategory: true,
+            });
+        }
+    }
     render() {
     
         return (
@@ -77,8 +101,12 @@ class BillForm extends React.Component {
                         </label> 
                     </div>
                     <div className='midinput'>
-                        <div className="leftinput">
-                        
+                        <div >
+                                <button className="leftinput" onClick={this._onCategoryClick}></button>
+                                {this.state.showCategory ?
+                                    <CategoryContainer setCategory={this.setCategory} category={this.state.category} /> :
+                                    null
+                                }
                         </div>
                         <div className='rightinput'>
                             <input className='desc' type="text" onChange={this.update('description')} placeholder="Enter a description" value={this.state.title} />
