@@ -6,6 +6,8 @@ class Api::FriendshipsController < ApplicationController
             render json: ['User does not exist'], status: 422  
         elsif current_user.pending_friends.include?(User.find_by(username: params[:friend]))
             render json: ['You already added this friend!'], status: 422  
+        elsif current_user.friends.include?(User.find_by(username: params[:friend]))
+            render json: ['You are already friends :) '], status: 422  
         else
             @friendship = Friendship.new(user_id: current_user.id, friend_id: User.find_by(username: params[:friend]).id)
         
