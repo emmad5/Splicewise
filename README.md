@@ -6,7 +6,7 @@ SpliceWise is a app designed to simplify the process of splitting bills with fri
 
 [Live Site!](https://splicewise.herokuapp.com/#/)
 
-![alt text]()
+![alt text](https://github.com/emmad5/Splicewise/blob/master/app/assets/images/screenshot.png)
 
 ## Technologies
 * [Splicewise](https://splicewise.herokuapp.com/#/) was written using Ruby on Rails and Javascriopt. The frontend was built using React as the library and Redux as the framework. 
@@ -33,3 +33,6 @@ SpliceWise is a app designed to simplify the process of splitting bills with fri
 * Groups - Split your expenses with multiple people and organize all your expenses from one trip or event in one convenient place. 
 * Recent Activity - Show all of your recent transactions in one place.
 * Comments - Comment on bills to discuss the expense or just chat with friends!
+
+![alt text](https://github.com/emmad5/Splicewise/blob/master/app/assets/images/screenshot2.png)
+
