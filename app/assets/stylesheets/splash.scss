@@ -248,7 +248,10 @@
     border-radius: 5px;
     padding: 10px 50px;
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
- 
+    position: absolute;
+    right: 40%;
+    top: 600px;
+    margin-bottom: 100px;
     text-shadow: 0 -1px 0 #c83400;
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
@@ -319,7 +322,7 @@
      display: flex;
      justify-content: space-evenly;
      align-items: center;
-     margin-top: 200px;
+     margin-top: 290px;
   }
   .splash-main-content {
    
