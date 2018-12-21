@@ -218,35 +218,6 @@
     height: 70px;
     z-index: 2;
  }
- .splashimg {
-    display: flex;
-    margin-top: 20px;
- }
-
- .splash1img {
-    background: image_url('splash1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 1000px;
-    height: 350px;
-    z-index: 2;
-   margin-left: 350px;
- }
- .splash1img:hover {
-
- }
-  .splash2img {
-    background: image_url('splash2.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width:  1000px;
-    height: 350px;
-    z-index: 2;
- }
- .splash2img:hover {
-
- }
-
  .splashcontenttitle {
     margin: 30px;
     display: flex;
@@ -367,12 +338,12 @@
 
   /// TESTING
 
-  .splash-images {
-  height: 250px;
+  .splash-img {
+  height: 350px;
   padding: 0;
   display: flex;
   position: relative;
-  width: 450px;
+  width: 550px;
   margin: 23px auto 23px;
   &:hover img {
     opacity: 0.5;
@@ -388,18 +359,16 @@
   img {
     max-width: 100%;
     height: auto;
-    display: inline;
-    height: 240px;
-    width: 375px;
+    height: 340px;
+    width: 475px;
     transition: left 0.30s ease-out, transform 0.25s ease-out;
-    cursor: pointer;
     position: relative;
     &:last-child {
       order: -1;
       left: -10%;
     }
     &:first-child {
-      width: 120px;
+      width: 160px;
       left: -8%;
     }
     &:hover {
