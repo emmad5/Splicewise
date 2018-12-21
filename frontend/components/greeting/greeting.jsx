@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from './footer'
 
 
 class Greeting extends React.Component {
@@ -23,6 +24,7 @@ class Greeting extends React.Component {
 
         return (
             <nav>
+                <div className='splash-main-content'>
             <header className="header">
             <Link className="heading" to="/">SPLICEWISE</Link>
             </header>
@@ -39,6 +41,8 @@ class Greeting extends React.Component {
                 <div className='splash2img'></div>
             </div>
                 <Link className="signup-big-button" to="/signup"><div>Get started now</div><div className='signup-smaller'>(It's free!)</div></Link>
+                </div>
+                <Footer/>
             </nav>
         )
     }

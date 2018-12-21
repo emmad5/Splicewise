@@ -88,6 +88,16 @@ class BillForm extends React.Component {
         }
     }
     render() {
+        let num;
+        if (parseFloat(this.state.balance)) {
+            if (this.state.borrower == "") {
+                num = (parseFloat(this.state.balance)).toFixed(2)
+            } else{
+                num = (parseFloat(this.state.balance) / 2).toFixed(2)
+            }
+        } else {
+            num = 0;
+        }
     
         return (
             <div>
@@ -116,6 +126,7 @@ class BillForm extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <div className='eachbalance'>(${num}/person)</div>
                     <div className='paidby'>
                             <div>Paid by </div>
                             <div className='you'>
@@ -125,7 +136,7 @@ class BillForm extends React.Component {
                                     null
                                 }
                             </div>
-                            <div> and split</div>  <a className="equally">equally</a>.
+                            <div> and split </div>  <a className="equally">equally</a>.
                     </div>
                     </div>
                    <div className='buttons'>
@@ -144,4 +155,3 @@ class BillForm extends React.Component {
 export default BillForm;
 
 
-// {/* <button onClick={() => this.props.openModal('paidby')} className="you">you</button> */}

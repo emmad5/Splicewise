@@ -48,7 +48,7 @@ class BillIndexItem extends React.Component {
                     }
                 </div>
                 </div>
-                    {/* <button className="delete" onClick={() => this.props.openModal('editbillform')}>Edit Bill</button> */}
+                    {/* <button className="delete" onClick={() => this.props.openModal('editbillform', this.props.bill.id)}>Edit Bill</button> */}
                     <button className="delete" onClick={this.removeBill(this.props.bill.id)}>&#10005;</button>
                 </li> 
         )

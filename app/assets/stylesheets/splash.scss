@@ -341,3 +341,72 @@
     height: 200px;
     z-index: 2;
   }
+
+  .footer {
+     height: 100px;
+     width: 100%;
+     background: #666666;
+     color: white;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+  }
+  .splash-main-content {
+     height: 700px;
+  }
+  .madewithsmiles {
+    text-shadow: 0 -1px 0 #1a1919;
+    width: 420px;
+    margin-right: 90px;
+    font-weight: bold;
+    font-size: 24px;
+ 
+    line-height: 30px;
+  }
+
+
+  /// TESTING
+
+  .splash-images {
+  height: 250px;
+  padding: 0;
+  display: flex;
+  position: relative;
+  width: 450px;
+  margin: 23px auto 23px;
+  &:hover img {
+    opacity: 0.5;
+    z-index: 0;
+    &:last-child {
+      left: -7%;
+    }
+    &:first-child {
+      left: -11%;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: inline;
+    height: 240px;
+    width: 375px;
+    transition: left 0.30s ease-out, transform 0.25s ease-out;
+    cursor: pointer;
+    position: relative;
+    &:last-child {
+      order: -1;
+      left: -10%;
+    }
+    &:first-child {
+      width: 120px;
+      left: -8%;
+    }
+    &:hover {
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1.1, 1.1);
+    }
+  }
+
+}

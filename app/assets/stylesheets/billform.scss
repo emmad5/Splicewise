@@ -9,7 +9,7 @@
    border: 1px solid #999;
    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
    border-radius: 8px;
-   height: 394px;
+   height: 405px;
    width: 352px;
 }
 
@@ -78,8 +78,6 @@
 .addfriendslabel {
    font-size: 14px;
    padding-left: 4px;
- 
-
 }
 .dollar {
    font-size: 30px;
@@ -89,7 +87,7 @@
    display: flex;
 }
 .innerbillform {
-   height: 257px;
+   height: 288px;
 }
 .addfriendscont {
    padding-bottom: 10px;
@@ -99,6 +97,7 @@
    font-size: 36px;
    padding-left: 5px;
   padding-top: 18px;
+  width: 180px;
 }
 .you {
    background: rgb(245, 242, 242);
@@ -237,4 +236,7 @@
 }
 .lastli:hover {
     background: #ccc;
+}
+.eachbalance {
+   text-align: center;
 }

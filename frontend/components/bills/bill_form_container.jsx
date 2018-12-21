@@ -8,7 +8,8 @@ import {clearErrors} from '../../actions/session_actions';
 
 const mapStateToProps = (state) => ({
     errors: state.errors.session,
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    users: Object.values(state.entities.users)
 })
 const mapDispatchToProps = dispatch => {
     return {

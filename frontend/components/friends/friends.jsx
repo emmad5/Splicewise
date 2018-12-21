@@ -4,6 +4,7 @@ import DashHeaderContainer from '../dashboard/dash_header/dash_header_container'
 import { billsWithFriends } from '../../reducers/selectors';
 import BillIndexItem from '../bills/bill_index_item';
 import {Link} from 'react-router-dom';
+import LeftNav from '../dashboard/left_nav';
 
 class FriendShow extends React.Component {
     constructor(props) {
@@ -42,27 +43,9 @@ class FriendShow extends React.Component {
                     </div>
                 </header> 
                 <nav className="main">
-                    <nav className="left-nav">
-                        <UsersListContainer />
-                        <nav className='left-nav-img'></nav>
-                        <nav className="invitenav">
-                            <h1 className='invitefriends'>Invite Friends to Splicewise</h1>
-                            <input type="text" className='emailadd' placeholder='Enter an email address' />
-                            <input className='submitemail' type="submit" value="Send invite" />
-                        </nav>
-                        <br/>
-                        <div className='buttonflex'>
-                            <a href="https://www.linkedin.com/in/emma-deas-49020a133/" target="_blank" className='linkedin'>Linked <i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/emmad5" target="_blank" className='linkedin github' >Github <i class="fab fa-github"></i></a>
-                        </div>
-
-                    </nav>
+                    <LeftNav/>
                     <nav className="main-nav">
-                        <DashHeaderContainer friend={friend} />
-                        
-                        <div>
-                           
-                        </div>
+                        <DashHeaderContainer friend={friend} />                     
                         <ul>{mappedUL}</ul>
                         <nav className="main-nav-img"></nav>
                     </nav>
@@ -70,6 +53,7 @@ class FriendShow extends React.Component {
                     <Link to="/dashboard">
                         <button className='delete-friend-button' onClick={() => this.props.removeFriend(this.props.friend.id)}>Remove This Friend</button>
                     </Link>
+                        <nav className='left-nav-img'></nav>
                     </nav>
                 </nav>
                 

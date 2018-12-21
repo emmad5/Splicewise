@@ -27,6 +27,13 @@
     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
 }
+.linkedin:hover {
+    box-shadow: none;
+    background: rgb(15, 104, 160);
+}
 .github {
     background-color: #239A3B;
+}
+.github:hover {
+    background-color: rgb(30, 146, 53);
 }

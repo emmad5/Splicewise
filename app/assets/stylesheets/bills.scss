@@ -143,6 +143,9 @@ font-weight: lighter;
     border: 2px white solid;
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
+.Uncategorized2:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
 .Home2 {
     background: image_url('mortgage.png');
     background-size: contain;
@@ -154,6 +157,9 @@ font-weight: lighter;
     margin-right: 40px;
     border: 2px white solid;
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.Home2:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
 }
 .Life2 {
     background: image_url('music.png');
@@ -167,6 +173,9 @@ font-weight: lighter;
     border: 2px white solid;
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
+.Life2:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
 .Utilities2 {
     background: image_url('electricity.png');
     background-size: contain;
@@ -178,6 +187,9 @@ font-weight: lighter;
     margin-right: 40px;
     border: 2px white solid;
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.Utilities2:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
 }
 .Transportation2 {
     background: image_url('taxi.png');
@@ -191,6 +203,9 @@ font-weight: lighter;
     border: 2px white solid;
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
+.Transportation2:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
 .Food.and.Drink2 {
     background: image_url('dining-out.png');
     background-size: contain;
@@ -202,4 +217,7 @@ font-weight: lighter;
     margin-right: 40px;
     border: 2px white solid;
     box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.Food.and.Drink2:hover {
+    box-shadow: 0 0px 1px rgba(0,0,0,0.5);
 }

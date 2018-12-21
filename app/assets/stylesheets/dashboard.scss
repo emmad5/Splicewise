@@ -30,6 +30,10 @@
     cursor: pointer;
     color: grey;
  }
+ .comingsoon {
+    margin: 10px;
+    color: rgba(99, 197, 201, 0.836);
+ }
 
 
  
@@ -41,7 +45,8 @@
     font-weight: lighter;
     cursor: pointer;
     background-color: #5BC5A7;
-    height: 30px;
+    height: 33px;
+    margin-left: 3px;
  }
 .username:hover {
    background-color: #43BA98;
@@ -127,6 +132,7 @@
 }
 .usernameimg {
    display: flex;
+
 }
 .usernameimg:hover {
    background-color: #43BA98;
