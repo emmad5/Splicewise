@@ -323,7 +323,7 @@
      align-items: center;
   }
   .splash-main-content {
-     height: 700px;
+     min-height: 700px;
   }
   .madewithsmiles {
     text-shadow: 0 -1px 0 #1a1919;
@@ -335,16 +335,14 @@
     line-height: 30px;
   }
 
-
-  /// TESTING
-
   .splash-img {
   height: 350px;
   padding: 0;
   display: flex;
   position: relative;
   width: 550px;
-  margin: 23px auto 23px;
+  margin: 0 auto;
+  margin-top: 20px;
   &:hover img {
     opacity: 0.5;
     z-index: 0;
@@ -360,15 +358,15 @@
     max-width: 100%;
     height: auto;
     height: 340px;
-    width: 475px;
-    transition: left 0.30s ease-out, transform 0.25s ease-out;
+    width: 495px;
+    transition: left 0.50s ease-out, transform 0.35s ease-out;
     position: relative;
     &:last-child {
       order: -1;
       left: -10%;
     }
     &:first-child {
-      width: 160px;
+      width: 165px;
       left: -8%;
     }
     &:hover {
@@ -377,5 +375,4 @@
       transform: scale(1.1, 1.1);
     }
   }
-
 }
