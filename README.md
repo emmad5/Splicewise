@@ -33,3 +33,6 @@ SpliceWise is a app designed to simplify the process of splitting bills with fri
 * Groups - Split your expenses with multiple people and organize all your expenses from one trip or event in one convenient place. 
 * Recent Activity - Show all of your recent transactions in one place.
 * Comments - Comment on bills to discuss the expense or just chat with friends!
+
+![alt text](https://github.com/emmad5/Splicewise/blob/master/app/assets/images/screenshot2.png)
+
