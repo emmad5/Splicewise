@@ -9,12 +9,19 @@ import LeftNav from '../dashboard/left_nav';
 class FriendShow extends React.Component {
     constructor(props) {
         super(props);
+       
     }
     componentDidMount() {
         this.props.fetchBills();
         this.props.fetchPayments();
     }
- 
+    componentDidUpdate(prevProps) {
+        if (prevProps.bills.length < this.props.bills.length) {
+            this.props.fetchBills();
+            this.props.fetchPayments();
+        }
+    }
+   
     render() {
         let friend;
         let billFriends;
@@ -39,7 +46,7 @@ class FriendShow extends React.Component {
                     <h3></h3>
                     <div className="usernameimg">
                         <div className="headimg"></div>
-                        <button onClick={() => this.props.openModal('logout')} className='username'>{this.props.currentUser.username}! <i class="fas fa-caret-down"></i></button>
+                        <button onClick={() => this.props.openModal('logout')} className='username'>{this.props.currentUser.username}! <i className="fas fa-caret-down"></i></button>
                     </div>
                 </header> 
                 <nav className="main">
@@ -56,8 +63,6 @@ class FriendShow extends React.Component {
                         <nav className='left-nav-img'></nav>
                     </nav>
                 </nav>
-                
-             
                 </div>
         )
     }
