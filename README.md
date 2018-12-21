@@ -6,7 +6,7 @@ SpliceWise is a app designed to simplify the process of splitting bills with fri
 
 [Live Site!](https://splicewise.herokuapp.com/#/)
 
-![alt text]()
+![alt text](https://github.com/emmad5/Splicewise/blob/master/app/assets/images/screenshot.png)
 
 ## Technologies
 * [Splicewise](https://splicewise.herokuapp.com/#/) was written using Ruby on Rails and Javascriopt. The frontend was built using React as the library and Redux as the framework. 
