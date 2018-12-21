@@ -1,7 +1,7 @@
 # README
 
 ## Welcome to the SpliceWise Wiki
-(Live Site!)[https://splicewise.herokuapp.com/#/]
+[Live Site!](https://splicewise.herokuapp.com/#/)
 
 # Key Features
 
