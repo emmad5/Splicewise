@@ -1,6 +1,6 @@
-# README
+## README
 
-# Welcome to the SpliceWise Wiki
+# Welcome to SpliceWise
 
 SpliceWise is a app designed to simplify the process of splitting bills with friends. It was designed as a clone of the common bill splitting website, Splitwise. Keep track of all of your expenses and IOUs in one place and never have to deal with the awkward conversation of reminding friends or family to pay you back again. Best of all, Splicewise is, and always will be, completely free!
 
