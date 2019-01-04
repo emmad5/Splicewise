@@ -42,7 +42,7 @@ class SignupForm extends React.Component {
     render() {
         return(
             <div className='flexSignUp'>   
-            <div className='signupimg'></div>         
+                    
                 <form onSubmit={this.handleSubmit} className="signupform">
                     <h3 className="intro">INTRODUCE YOURSELF</h3>
                     <div>{this.renderErrors()}</div>
