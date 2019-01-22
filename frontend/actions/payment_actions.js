@@ -25,9 +25,6 @@ export const fetchPayments = () => dispatch => (
     })
 );
 
-
-
-
 export const receivePaymentErrors = (errors) => {
     return ({
         type: RECEIVE_PAYMENT_ERRORS,
