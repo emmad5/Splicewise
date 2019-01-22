@@ -27,16 +27,30 @@ class FriendShow extends React.Component {
         let billFriends;
         let mappedBillFriends;
         let mappedUL;
+        let friendButton;
+        let friendIds = this.props.friends.map(friend => friend.id);
         if (this.props.friend) {
             friend = this.props.friend.username;
             if (this.props.payments) {
                 billFriends = billsWithFriends(this.props.bills, this.props.payments, this.props.friend.id);
+            }
+            if (friendIds.includes(this.props.friend.id)) {
+                friendButton = <Link to="/dashboard">
+                    <button className='delete-friend-button' onClick={() => this.props.removeFriend(this.props.friend.id)}>Remove This Friend</button>
+                </Link>
+            } else {
+                friendButton = <Link to="/dashboard">
+                    <button className='delete-friend-button' onClick={(e) => e}>Dashboard</button>
+                    
+            </Link>
             }
         }
         if (billFriends) {
             mappedBillFriends = billFriends.map(bill => <BillIndexItem key={bill.id} bill={bill} deleteBill={this.props.deleteBill} openModal={this.props.openModal} fetchPayments={this.props.fetchPayments} />)           
             mappedUL = (<ul className='allbills'>{mappedBillFriends}</ul>)
         }
+        
+        
        
        
         return (
@@ -57,9 +71,7 @@ class FriendShow extends React.Component {
                         <nav className="main-nav-img"></nav>
                     </nav>
                     <nav className="right-nav">
-                    <Link to="/dashboard">
-                        <button className='delete-friend-button' onClick={() => this.props.removeFriend(this.props.friend.id)}>Remove This Friend</button>
-                    </Link>
+                    {friendButton}
                         <nav className='left-nav-img'></nav>
                     </nav>
                 </nav>

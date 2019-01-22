@@ -6,7 +6,7 @@ import {billsWithFriends} from '../../reducers/selectors';
 import {fetchBills} from '../../actions/bill_actions';
 import {fetchPayments} from '../../actions/payment_actions';
 import {clearBillErrors, deleteBill} from '../../actions/bill_actions';
-import {removeFriend} from '../../actions/friend_actions';
+import { removeFriend, addFriend} from '../../actions/friend_actions';
 
 
 
@@ -15,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
        currentUser: state.entities.users[state.session.id],
         friend: state.entities.users[ownProps.match.params.friendId],
         bills: Object.values(state.entities.bills),
-        payments: Object.values(state.entities.payments)
+        payments: Object.values(state.entities.payments),
+       friends: state.entities.users[state.session.id].friends,
         // friendsBills: billsWithFriends(state, ownProps)
     }
 };
@@ -27,7 +28,8 @@ const mapDispatchToProps = (dispatch) => ({
     fetchPayments: () => dispatch(fetchPayments()),
     clearBillErrors: () => dispatch(clearBillErrors()),
     deleteBill: (id) => dispatch(deleteBill(id)),
-    removeFriend: (id) => dispatch(removeFriend(id))
+    removeFriend: (id) => dispatch(removeFriend(id)),
+    addFriend: (friend) => dispatch(addFriend(friend)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FriendShow);
