@@ -1,7 +1,7 @@
 import React from 'react';
 import PaidByContainer from './paid_by_container';
 import CategoryContainer from './category_container';
-
+import Select from 'react-select';
 
 class BillForm extends React.Component {
     componentDidMount() {
