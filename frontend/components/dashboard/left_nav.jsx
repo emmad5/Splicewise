@@ -18,8 +18,8 @@ class LeftNav extends React.Component {
                 </nav>
                 <br />
                 <div className='buttonflex'>
-                    <a href="https://www.linkedin.com/in/emma-deas-49020a133/" target="_blank" className='linkedin'>Linked <i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/emmad5" target="_blank" className='linkedin github'>Github <i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/emma-deas-49020a133/" target="_blank" className='linkedin'>Linked <i className="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/emmad5" target="_blank" className='linkedin github'>Github <i className="fab fa-github"></i></a>
                 </div>
             </nav>
             

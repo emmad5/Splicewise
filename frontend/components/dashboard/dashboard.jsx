@@ -15,7 +15,7 @@ const Dashboard = ({ currentUser, logout, openModal }) => {
             <h3></h3>
                 <div className="usernameimg">
                     <div className="headimg"></div>
-                    <button onClick={() => openModal('logout')} className='username'>{currentUser.username}! <i class="fas fa-caret-down"></i></button>
+                    <button onClick={() => openModal('logout')} className='username'>{currentUser.username}! <i className="fas fa-caret-down"></i></button>
                 </div>
             </header>
             <nav className="main">

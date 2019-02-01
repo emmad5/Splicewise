@@ -7,6 +7,17 @@ export const selectBillPayments = (payments, bill) => {
 
 };
 
+export const handleUsers = (users) => {
+    let friendOptions = []
+    users.forEach(user => {
+        friendOptions.push({
+            value: user.username,
+            label: user.username
+        })
+    })
+    return friendOptions;
+}
+
 
 // export const billsWithFriends = (state, ownProps) => {
 //     let payments = Object.values(state.entities.payments).filter(payment => payment.user_id == ownProps.match.params.friendId)

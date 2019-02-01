@@ -5,11 +5,12 @@ import BillForm from './bill_form';
 import { createBill, clearBillErrors } from '../../actions/bill_actions';
 import {createPayment} from '../../actions/payment_actions';
 import {clearErrors} from '../../actions/session_actions';
+import { handleUsers} from '../../reducers/selectors';
 
 const mapStateToProps = (state) => ({
     errors: state.errors.session,
     currentUser: state.entities.users[state.session.id],
-    users: Object.values(state.entities.users)
+    users: handleUsers(Object.values(state.entities.users))
 })
 const mapDispatchToProps = dispatch => {
     return {

@@ -10,13 +10,15 @@ class BillForm extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { description: "", balance: "", borrower: "", showComponent: false, payer: this.props.currentUser.username, showCategory: false, category: 'Uncategorized'};
+        this.state = { description: "", balance: "", borrower: "", borrowerObj: {}, showComponent: false, payer: this.props.currentUser.username, showCategory: false, category: 'Uncategorized'};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
+        this.updateBorrower = this.updateBorrower.bind(this);
         this._onButtonClick = this._onButtonClick.bind(this);
         this._onCategoryClick = this._onCategoryClick.bind(this);
         this.set = this.set.bind(this);
         this.setCategory = this.setCategory.bind(this);
+        
     }
 
     handleSubmit(e) {
@@ -29,6 +31,12 @@ class BillForm extends React.Component {
 
     update(field) {
         return (e) => this.setState({ [field]: e.currentTarget.value });
+    }
+    updateBorrower(friend) {
+        if (friend) {
+            this.setState({ borrower: friend.value });
+        }
+        this.setState({ borrowerObj: friend });
     }
 
     renderErrors() {
@@ -73,7 +81,7 @@ class BillForm extends React.Component {
             that.setState({ showCategory: false })
         }
     }
-
+    
     _onCategoryClick(e) {
         e.preventDefault();
         if (this.state.showCategory) {
@@ -89,6 +97,7 @@ class BillForm extends React.Component {
     }
     render() {
         let num;
+        
         if (parseFloat(this.state.balance)) {
             if (this.state.borrower == "") {
                 num = (parseFloat(this.state.balance)).toFixed(2)
@@ -98,7 +107,13 @@ class BillForm extends React.Component {
         } else {
             num = 0;
         }
-    
+        const options = [
+            { value: 'chocolate', label: 'Chocolate' },
+            { value: 'strawberry', label: 'Strawberry' },
+            { value: 'vanilla', label: 'Vanilla' }
+        ];
+     
+       
         return (
             <div>
                 <form onSubmit={this.handleSubmit} className="billform">
@@ -109,7 +124,18 @@ class BillForm extends React.Component {
                     <div className='addfriendscont'>
                         <label className='addfriendslabel'>With <strong>you</strong> and:
                             <input className="addfriends" type="text" placeholder="Enter username" onChange={this.update('borrower')} />
-                        </label> 
+                                
+                        </label>
+                            <Select
+                                className="basic-single"
+                                classNamePrefix="select"
+                                isClearable={true}
+                                isSearchable={true}
+                                value={this.state.borrowerObj}
+                                name="color"
+                                options={this.props.users}
+                                onChange={this.updateBorrower}
+                            /> 
                     </div>
                     <div className='midinput'>
                         <div >
