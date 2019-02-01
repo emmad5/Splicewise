@@ -123,7 +123,7 @@ class BillForm extends React.Component {
                         <div>{this.renderErrors()}</div>
                     <div className='addfriendscont'>
                         <label className='addfriendslabel'>With <strong>you</strong> and:
-                            <input className="addfriends" type="text" placeholder="Enter username" onChange={this.update('borrower')} />
+                            {/* <input className="addfriends" type="text" placeholder="Enter username" onChange={this.update('borrower')} /> */}
                                 
                         </label>
                             <Select
