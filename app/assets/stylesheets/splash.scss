@@ -133,9 +133,9 @@
     
  }
  .signupform {
-     position: absolute;
-     top: 120px;
-     left: 40%;
+   //   position: absolute;
+   //   top: 120px;
+   //   left: 40%;
      color: grey
  }
  .signupbutton {
@@ -300,18 +300,18 @@
   .flexSignUp {
      display: flex;
      justify-content: center;
-    
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
   }
   .signupimg {
     background: image_url('logo.png');
     background-size: contain;
     background-repeat: no-repeat;
-    position: absolute;
-    right: 850px;
-    top: 160px;
+      margin-right: 70px;
     width:  200px;
     height: 200px;
-    z-index: 2;
+
   }
 
   .footer {

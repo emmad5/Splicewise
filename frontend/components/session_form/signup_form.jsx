@@ -43,6 +43,8 @@ class SignupForm extends React.Component {
         return(
             <div className='flexSignUp'>   
                     
+                  <div className='signupimg'></div>
+                  <div>
                 <form onSubmit={this.handleSubmit} className="signupform">
                     <h3 className="intro">INTRODUCE YOURSELF</h3>
                     <div>{this.renderErrors()}</div>
@@ -58,6 +60,7 @@ class SignupForm extends React.Component {
                     <br/>
                     <a href="https://i.ytimg.com/vi/hbYK-JzFtPg/maxresdefault.jpg" target="_blank" className='terms'>By signing up, you accept the Splicewise Terms of Service.</a>
                 </form>
+                </div>
             </div>
         )
     }
