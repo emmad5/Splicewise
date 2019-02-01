@@ -78,6 +78,12 @@
 .addfriendslabel {
    font-size: 14px;
    padding-left: 4px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+.basic-single {
+   width: 200px;
 }
 .dollar {
    font-size: 30px;

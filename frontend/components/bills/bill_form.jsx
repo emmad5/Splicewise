@@ -107,12 +107,6 @@ class BillForm extends React.Component {
         } else {
             num = 0;
         }
-        const options = [
-            { value: 'chocolate', label: 'Chocolate' },
-            { value: 'strawberry', label: 'Strawberry' },
-            { value: 'vanilla', label: 'Vanilla' }
-        ];
-     
        
         return (
             <div>
@@ -122,20 +116,20 @@ class BillForm extends React.Component {
                     <div className='innerbillform'>
                         <div>{this.renderErrors()}</div>
                     <div className='addfriendscont'>
-                        <label className='addfriendslabel'>With <strong>you</strong> and:
+                        <div className='addfriendslabel'>With <strong>you</strong> and:
                             {/* <input className="addfriends" type="text" placeholder="Enter username" onChange={this.update('borrower')} /> */}
-                                
-                        </label>
-                            <Select
-                                className="basic-single"
-                                classNamePrefix="select"
-                                isClearable={true}
-                                isSearchable={true}
-                                value={this.state.borrowerObj}
-                                name="color"
-                                options={this.props.users}
-                                onChange={this.updateBorrower}
-                            /> 
+                                <Select
+                                    className="basic-single"
+                                    classNamePrefix="select"
+                                    isClearable={true}
+                                    isSearchable={true}
+                                    value={this.state.borrowerObj}
+                                    name="color"
+                                    options={this.props.users}
+                                    onChange={this.updateBorrower}
+                                />    
+                        </div>
+                            
                     </div>
                     <div className='midinput'>
                         <div >
