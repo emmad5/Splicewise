@@ -10,7 +10,7 @@ import { handleUsers} from '../../reducers/selectors';
 const mapStateToProps = (state) => ({
     errors: state.errors.session,
     currentUser: state.entities.users[state.session.id],
-    users: handleUsers(Object.values(state.entities.users))
+    users: handleUsers(Object.values(state.entities.users), state.entities.users[state.session.id])
 })
 const mapDispatchToProps = dispatch => {
     return {

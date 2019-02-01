@@ -7,9 +7,12 @@ export const selectBillPayments = (payments, bill) => {
 
 };
 
-export const handleUsers = (users) => {
+export const handleUsers = (users, current) => {
     let friendOptions = []
     users.forEach(user => {
+        if (user.username == current.username) {
+            return;
+        }
         friendOptions.push({
             value: user.username,
             label: user.username
