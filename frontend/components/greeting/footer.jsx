@@ -10,7 +10,7 @@ class Footer extends React.Component {
         return(
             <div className='footer'>
                 <div>
-                    <div className='madewithsmiles'> Made with <i class="fas fa-grin-beam-sweat"></i> in San Francisco, CA, USA</div> 
+                    <div className='madewithsmiles'> Made with <i class="fas fa-grin-beam-sweat"></i> in San Francisco, CA USA</div> 
                     <div>Copyright 2018 Splicewise, Inc. All rights reserved.</div>
                 </div>
                 
