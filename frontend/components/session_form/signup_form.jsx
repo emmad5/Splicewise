@@ -12,6 +12,8 @@ class SignupForm extends React.Component {
         this.handleSubmit2 = this.handleSubmit2.bind(this);
 
         this.update = this.update.bind(this);
+        this.username = 'guest'.split('');
+        this.password = 'password'.split('')
     }
 
     handleSubmit(e) {
@@ -21,8 +23,31 @@ class SignupForm extends React.Component {
     }
     handleSubmit2(e) {
         e.preventDefault();
-        const user2 = Object.assign({ username: 'guest', password: 'password' });
-        this.props.login(user2);
+        // const user2 = Object.assign({ username: 'guest', password: 'password' });
+        // this.props.login(user2);
+        this.startDemo.bind(this)();
+    }
+    startDemo() {
+        let { username } = this.state;
+        let { password } = this.state;
+        if (this.username.length > 0) {
+            this.setState(
+                { username: username + this.username.shift() }, () => {
+                    setTimeout(() =>
+                        this.startDemo(), 150);
+                }
+            )
+        } else if (this.password.length > 0) {
+            this.setState(
+                { password: password + this.password.shift() }, () => {
+                    setTimeout(() =>
+                        this.startDemo(), 150)
+                }
+            )
+        } else {
+            this.props.login(this.state);
+        }
+
     }
     update(field) {
         return (e) => this.setState({[field]: e.currentTarget.value})
@@ -49,9 +74,9 @@ class SignupForm extends React.Component {
                     <h3 className="intro">INTRODUCE YOURSELF</h3>
                     <div>{this.renderErrors()}</div>
                     <h2 className="usernametext">Hi There! My username is</h2>
-                    <input type="text" onChange={this.update('username')} className="usernameinput"/>
+                    <input type="text" onChange={this.update('username')} value={this.state.username} className="usernameinput"/>
                     <h2 className="passwordtext">And here's my <span className="bold"> password:</span></h2>
-                    <input type="password" onChange={this.update('password')} className="passwordinput"/>
+                        <input type="password" onChange={this.update('password')} value={this.state.password} className="passwordinput"/>
                     <br/>
                     <input type="submit" value="Sign Me Up!" className="signupbutton"/>
                     <br/>
